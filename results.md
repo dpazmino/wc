@@ -7,8 +7,8 @@ for that game (lower is better; a blind 1/3-1/3-1/3 guess scores 0.667).*
 | Match | Predicted W/D/L | Pick | Actual | Hit | Brier |
 |---|---|---|---|:--:|--:|
 | Mexico vs South Africa | 53/23/25 | Mexico | 2-0 (Mexico) | ✅ | 0.34 |
-| South Korea vs Czechia | 31/27/42 | Czechia | 2-1 (South Korea) | ❌ | 0.72 |
-| Canada vs Bosnia | 43/26/31 | Canada | 1-1 (Draw) | ❌ | 0.82 |
+| South Korea vs Czechia | 31/27/42 | Czechia | 2-1 (South Korea) | NP | 0.72 |
+| Canada vs Bosnia | 43/26/31 | Canada | 1-1 (Draw) | NP | 0.82 |
 | USA vs Paraguay | 54/22/24 | USA | 4-1 (USA) | ✅ | 0.32 |
 | Qatar vs Switzerland | 23/22/55 | Switzerland | 1-1 (Draw) | ❌ | 0.97 |
 | Brazil vs Morocco | 49/24/26 | Brazil | 1-1 (Draw) | ❌ | 0.89 |

@@ -139,3 +139,132 @@ The England–France final mirrors the title-odds top two exactly.
   overalls); ratings self-correct as real results are logged in `data/results.csv`.
 
 *Reproduce: `python tournament.py -n 100000`*
+
+---
+
+## Group-stage schedule (all 48 teams, 72 fixtures)
+
+12 groups of 4, each a 6-game round-robin. `(H)` = host plays at home. Confidence
+verdicts are from the rule-based labeller; *(low conf.)* = wide rating uncertainty
+(normal this early — fades as results accumulate).
+*Reproduce: `python tournament.py --fixtures`*
+
+### Group A — Mexico, South Africa, South Korea, Czechia
+| Fixture | Verdict |
+|---|---|
+| Mexico vs South Africa (H) | Mexico favoured *(low conf.)* |
+| Mexico vs South Korea (H) | Slight lean to Mexico *(low conf.)* |
+| Mexico vs Czechia (H) | Slight lean to Mexico *(low conf.)* |
+| South Africa vs South Korea | 🪙 Coin flip *(low conf.)* |
+| South Africa vs Czechia | Slight lean to Czechia *(low conf.)* |
+| South Korea vs Czechia | Slight lean to Czechia *(low conf.)* |
+
+### Group B — Canada, Bosnia and Herzegovina, Qatar, Switzerland
+| Fixture | Verdict |
+|---|---|
+| Canada vs Bosnia and Herzegovina (H) | Slight lean to Canada *(low conf.)* |
+| Canada vs Qatar (H) | Slight lean to Canada *(low conf.)* |
+| Canada vs Switzerland (H) | Slight lean to Switzerland *(low conf.)* |
+| Bosnia and Herzegovina vs Qatar | Slight lean to Bosnia *(low conf.)* |
+| Bosnia and Herzegovina vs Switzerland | Slight lean to Switzerland *(low conf.)* |
+| Qatar vs Switzerland | Switzerland favoured *(low conf.)* |
+
+### Group C — Brazil, Morocco, Haiti, Scotland
+| Fixture | Verdict |
+|---|---|
+| Brazil vs Morocco | Brazil favoured *(low conf.)* |
+| Brazil vs Haiti | Brazil clear favourite *(low conf.)* |
+| Brazil vs Scotland | Brazil favoured *(low conf.)* |
+| Morocco vs Haiti | Morocco favoured *(low conf.)* |
+| Morocco vs Scotland | 🪙 Coin flip *(low conf.)* |
+| Haiti vs Scotland | Slight lean to Scotland *(low conf.)* |
+
+### Group D — USA, Paraguay, Australia, Turkey
+| Fixture | Verdict |
+|---|---|
+| USA vs Paraguay (H) | USA favoured *(low conf.)* |
+| USA vs Australia (H) | USA favoured *(low conf.)* |
+| USA vs Turkey (H) | Slight lean to USA *(low conf.)* |
+| Paraguay vs Australia | Slight lean to Paraguay *(low conf.)* |
+| Paraguay vs Turkey | Slight lean to Turkey *(low conf.)* |
+| Australia vs Turkey | Turkey favoured *(low conf.)* |
+
+### Group E — Germany, Curacao, Ivory Coast, Ecuador
+| Fixture | Verdict |
+|---|---|
+| Germany vs Curacao | Germany clear favourite *(low conf.)* |
+| Germany vs Ivory Coast | Germany favoured *(low conf.)* |
+| Germany vs Ecuador | Germany clear favourite *(low conf.)* |
+| Curacao vs Ivory Coast | Ivory Coast favoured *(low conf.)* |
+| Curacao vs Ecuador | Slight lean to Ecuador *(low conf.)* |
+| Ivory Coast vs Ecuador | Slight lean to Ivory Coast *(low conf.)* |
+
+### Group F — Netherlands, Japan, Sweden, Tunisia
+| Fixture | Verdict |
+|---|---|
+| Netherlands vs Japan | Netherlands favoured *(low conf.)* |
+| Netherlands vs Sweden | Slight lean to Netherlands *(low conf.)* |
+| Netherlands vs Tunisia | Netherlands clear favourite *(low conf.)* |
+| Japan vs Sweden | 🪙 Coin flip *(low conf.)* |
+| Japan vs Tunisia | Japan favoured *(low conf.)* |
+| Sweden vs Tunisia | Sweden favoured *(low conf.)* |
+
+### Group G — Belgium, Egypt, Iran, New Zealand
+| Fixture | Verdict |
+|---|---|
+| Belgium vs Egypt | Belgium favoured *(low conf.)* |
+| Belgium vs Iran | Belgium favoured *(low conf.)* |
+| Belgium vs New Zealand | Belgium clear favourite *(low conf.)* |
+| Egypt vs Iran | Slight lean to Egypt *(low conf.)* |
+| Egypt vs New Zealand | Egypt favoured *(low conf.)* |
+| Iran vs New Zealand | Iran favoured *(low conf.)* |
+
+### Group H — Spain, Cape Verde, Saudi Arabia, Uruguay
+| Fixture | Verdict |
+|---|---|
+| Spain vs Cape Verde | Spain clear favourite *(low conf.)* |
+| Spain vs Saudi Arabia | Spain clear favourite *(low conf.)* |
+| Spain vs Uruguay | Slight lean to Spain *(low conf.)* |
+| Cape Verde vs Saudi Arabia | 🪙 Coin flip *(low conf.)* |
+| Cape Verde vs Uruguay | Uruguay favoured *(low conf.)* |
+| Saudi Arabia vs Uruguay | Uruguay favoured *(low conf.)* |
+
+### Group I — France, Senegal, Iraq, Norway
+| Fixture | Verdict |
+|---|---|
+| France vs Senegal | France favoured *(low conf.)* |
+| France vs Iraq | **France clear favourite** |
+| France vs Norway | France favoured *(low conf.)* |
+| Senegal vs Iraq | Senegal favoured *(low conf.)* |
+| Senegal vs Norway | Slight lean to Norway *(low conf.)* |
+| Iraq vs Norway | Norway favoured *(low conf.)* |
+
+### Group J — Argentina, Algeria, Austria, Jordan
+| Fixture | Verdict |
+|---|---|
+| Argentina vs Algeria | Argentina favoured *(low conf.)* |
+| Argentina vs Austria | Argentina favoured *(low conf.)* |
+| Argentina vs Jordan | Argentina clear favourite *(low conf.)* |
+| Algeria vs Austria | 🪙 Coin flip *(low conf.)* |
+| Algeria vs Jordan | Algeria favoured *(low conf.)* |
+| Austria vs Jordan | Austria favoured *(low conf.)* |
+
+### Group K — Portugal, DR Congo, Uzbekistan, Colombia
+| Fixture | Verdict |
+|---|---|
+| Portugal vs DR Congo | Portugal favoured *(low conf.)* |
+| Portugal vs Uzbekistan | Portugal clear favourite *(low conf.)* |
+| Portugal vs Colombia | Portugal favoured *(low conf.)* |
+| DR Congo vs Uzbekistan | Slight lean to DR Congo *(low conf.)* |
+| DR Congo vs Colombia | Slight lean to Colombia *(low conf.)* |
+| Uzbekistan vs Colombia | Slight lean to Colombia *(low conf.)* |
+
+### Group L — England, Croatia, Ghana, Panama
+| Fixture | Verdict |
+|---|---|
+| England vs Croatia | England favoured *(low conf.)* |
+| England vs Ghana | England favoured *(low conf.)* |
+| England vs Panama | **England clear favourite** |
+| Croatia vs Ghana | Slight lean to Croatia *(low conf.)* |
+| Croatia vs Panama | Croatia clear favourite *(low conf.)* |
+| Ghana vs Panama | Ghana favoured *(low conf.)* |

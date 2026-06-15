@@ -1,9 +1,6 @@
 # 2026 FIFA World Cup — Live Group-to-Bracket Projection
 
-*Generated 2026-06-14. Conditioned on the 10 results played so far (`--live`). Group
-finishing order is the most-likely finish from the live Monte-Carlo (qualify odds);
-the knockout uses the official 2026 bracket template with the favourite advancing
-every tie. ✓ = projected to qualify (top 2 of each group + the 8 best third-placed).*
+*Generated 2026-06-15. Conditioned on the 13 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify); the 8 qualifying thirds are the highest-P(qualify) third-placed teams that fit FIFA's slot table. Knockout = official 2026 bracket, favourite advances. ✓ = projected to qualify.*
 
 ```mermaid
 flowchart LR
@@ -59,8 +56,8 @@ flowchart LR
   end
   subgraph GH["Group H"]
     direction TB
-    g_Spain["1. Spain ✓"]
-    g_Uruguay["2. Uruguay ✓"]
+    g_Uruguay["1. Uruguay ✓"]
+    g_Spain["2. Spain ✓"]
     g_Cape_Verde["3. Cape Verde"]
     g_Saudi_Arabia["4. Saudi Arabia"]
   end
@@ -94,45 +91,45 @@ flowchart LR
   end
   subgraph K1["Round of 16"]
     direction TB
-    r1_Norway["Norway"]
+    r1_Canada["Canada"]
+    r1_Germany["Germany"]
+    r1_Netherlands["Netherlands"]
     r1_Brazil["Brazil"]
-    r1_Spain["Spain"]
-    r1_Egypt["Egypt"]
+    r1_France["France"]
+    r1_Norway["Norway"]
+    r1_Sweden["Sweden"]
+    r1_England["England"]
+    r1_Algeria["Algeria"]
     r1_Belgium["Belgium"]
     r1_Croatia["Croatia"]
-    r1_Portugal["Portugal"]
-    r1_Algeria["Algeria"]
-    r1_Germany["Germany"]
-    r1_England["England"]
+    r1_Uruguay["Uruguay"]
     r1_Switzerland["Switzerland"]
-    r1_Netherlands["Netherlands"]
-    r1_France["France"]
-    r1_Canada["Canada"]
-    r1_Sweden["Sweden"]
     r1_Argentina["Argentina"]
+    r1_Portugal["Portugal"]
+    r1_Egypt["Egypt"]
   end
   subgraph K2["Quarter-finals"]
     direction TB
-    r2_Spain["Spain"]
-    r2_Brazil["Brazil"]
-    r2_Belgium["Belgium"]
-    r2_Portugal["Portugal"]
-    r2_England["England"]
     r2_Germany["Germany"]
     r2_Netherlands["Netherlands"]
+    r2_Brazil["Brazil"]
+    r2_England["England"]
+    r2_Uruguay["Uruguay"]
+    r2_Belgium["Belgium"]
     r2_Argentina["Argentina"]
+    r2_Portugal["Portugal"]
   end
   subgraph K3["Semi-finals"]
     direction TB
-    r3_Spain["Spain"]
-    r3_Portugal["Portugal"]
     r3_Germany["Germany"]
+    r3_Belgium["Belgium"]
     r3_England["England"]
+    r3_Portugal["Portugal"]
   end
   subgraph K4["Final"]
     direction TB
-    r4_England["England"]
     r4_Germany["Germany"]
+    r4_England["England"]
   end
   subgraph KC["Champion"]
     champ["🏆 England"]
@@ -159,12 +156,12 @@ flowchart LR
   g_Senegal --> r1_Belgium
   g_Colombia --> r1_Croatia
   g_Croatia --> r1_Croatia
-  g_Spain --> r1_Spain
-  g_Austria --> r1_Spain
+  g_Uruguay --> r1_Uruguay
+  g_Austria --> r1_Uruguay
   g_Switzerland --> r1_Switzerland
   g_Iran --> r1_Switzerland
   g_Argentina --> r1_Argentina
-  g_Uruguay --> r1_Argentina
+  g_Spain --> r1_Argentina
   g_Portugal --> r1_Portugal
   g_Ghana --> r1_Portugal
   g_Australia --> r1_Egypt
@@ -177,8 +174,8 @@ flowchart LR
   r1_Norway --> r2_Brazil
   r1_Sweden --> r2_England
   r1_England --> r2_England
-  r1_Croatia --> r2_Spain
-  r1_Spain --> r2_Spain
+  r1_Croatia --> r2_Uruguay
+  r1_Uruguay --> r2_Uruguay
   r1_Algeria --> r2_Belgium
   r1_Belgium --> r2_Belgium
   r1_Argentina --> r2_Argentina
@@ -187,14 +184,14 @@ flowchart LR
   r1_Portugal --> r2_Portugal
   r2_Germany --> r3_Germany
   r2_Netherlands --> r3_Germany
-  r2_Spain --> r3_Spain
-  r2_Belgium --> r3_Spain
+  r2_Uruguay --> r3_Belgium
+  r2_Belgium --> r3_Belgium
   r2_Brazil --> r3_England
   r2_England --> r3_England
   r2_Argentina --> r3_Portugal
   r2_Portugal --> r3_Portugal
   r3_Germany --> r4_Germany
-  r3_Spain --> r4_Germany
+  r3_Belgium --> r4_Germany
   r3_England --> r4_England
   r3_Portugal --> r4_England
   r4_Germany --> champ
@@ -202,19 +199,6 @@ flowchart LR
   class champ champ;
 ```
 
-## How to read it
-- **Groups A–L** show each group's projected finishing order; ✓ marks the qualifiers
-  (top 2 + the 8 best thirds). Played results are baked in (e.g. Türkiye/Paraguay below
-  the line in D, South Africa/Czechia in A, Curaçao bottom of E).
-- Each qualifier's arrow feeds its Round-of-16 winner (the R32 matchup = the two arrows
-  converging), then QF → SF → Final → Champion.
-- **Projected path:** semis Germany, Spain, England, Portugal → final England vs Germany
-  → 🏆 **England**.
+**Projected champion: England.** Single most-likely path (favourite advances); exact probability is tiny — see the title-odds table for the real distribution.
 
-## Caveat
-This is the **single most-likely path** (favourite advances every tie; group order =
-most-likely finish). Its exact probability is tiny. The live Monte-Carlo still rates
-**Germany (9.6%)** a fraction ahead of **England (9.2%)** for the title even though this
-chalk path sends England through — it's "if form holds," not a literal prediction.
-
-*Reproduce: `python tournament.py --live` (odds) + the live-bracket projection script.*
+**Notes:** Spain's 0–0 with Cape Verde flips Group H — Uruguay is now the marginal group winner (40% vs Spain 38%), an effective coin-flip. The best-third cut falls between DR Congo (58% qualify, in) and Cape Verde (57%, out).

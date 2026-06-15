@@ -16,20 +16,22 @@ Brier = squared error for that game (lower is better; a blind 1/3-1/3-1/3 guess 
 | Australia vs Türkiye | 24/24/51 | Türkiye | 2-0 (Australia) | ❌ | 0.89 |
 | Germany vs Curaçao | 68/17/15 | Germany | 7-1 (Germany) | ✅ | 0.16 |
 | Netherlands vs Japan | 48/25/27 | Netherlands | 2-2 (Draw) | ❌ | 0.87 |
+| Côte d'Ivoire vs Ecuador | 48/25/28 | Ivory Coast | 1-0 (Ivory Coast) | NP | 0.41 |
 
-## Scoreboard (10 games)
-- **Top-pick accuracy: 4 / 10** (Mexico, USA, Scotland, Germany)
-- **Avg Brier (model): 0.636**  vs  **naive 1/3 baseline: 0.667**  → model now **beats** the baseline
-- **Draws: 4 / 10** · **Outright upsets: 2 / 10** (South Korea, Australia)
+## Scoreboard (11 games)
+- **Top-pick accuracy: 5 / 11** (Mexico, USA, Scotland, Germany, Ivory Coast)
+- **Avg Brier (model): 0.616**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
+- **Draws: 4 / 11** · **Outright upsets against the model: 2 / 11** (South Korea, Australia)
 
 ## Honest read
-After a rough first six, the model has **recovered to ahead of a blind guess** (Brier 0.636 vs 0.667). The turn came from two clean calls:
-- **Haiti–Scotland** — leaned Scotland (49%), Scotland won 1-0 (Brier 0.39).
-- **Germany–Curaçao** — Germany (68%) won **7-1** (Brier 0.16). This also **vindicated the market over the model**: when we DraftKings-anchored it, DK had Curaçao at ~3% vs the model's 15%, and the blowout proved the model was over-rating a debutant. The anchored 79% was the better number.
+The model has steadily climbed from a poor start (Brier 0.71 after 7) to **clearly ahead of a blind guess** (0.616 after 11), and top-pick accuracy is up to 5/11.
 
-Still-true caveats:
-- **The draw problem persists** — 4 of 10 are draws (Netherlands–Japan the latest), still above the ~25–27% the model expects. The single biggest source of misses.
-- **Top-pick accuracy (4/10) is still modest** — proper scoring (Brier) rewards the model's calibration even when the headline pick misses.
-- **Small sample.** The real measure remains the 269-fixture backtest (RPS 0.207 vs 0.231). Ten games is trending the right way but proves little on its own.
+- **Model beat the market on Côte d'Ivoire–Ecuador.** DraftKings made Ecuador the favourite (37% vs Ivory Coast 29%) and the anchored call was a coin-flip leaning Ecuador — I'd flagged "fade the model here." Instead the model's lean to **Ivory Coast (48%) was right** (1-0). A clean reminder that the market isn't always sharper than the strength model.
+- **Germany 7-1 Curaçao** (Brier 0.16) remains the model's best call; **Haiti–Scotland** and **Ivory Coast–Ecuador** were the kind of tight games it's now getting right.
+- **Misses are still mostly draws + the two upsets** (South Korea, Australia) where the favoured side controlled play but didn't win.
 
-*Updated through the June 14 games (Germany–Curaçao, Netherlands–Japan).*
+## Caveats
+- 11 games is still a small sample; the real measure is the 269-fixture backtest (RPS 0.207 vs 0.231).
+- Pending (predicted, not yet reported): **Sweden vs Tunisia** (Group F).
+
+*Updated through Côte d'Ivoire–Ecuador (June 14).*

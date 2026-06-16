@@ -1,6 +1,6 @@
 # 2026 FIFA World Cup — Live Group-to-Bracket Projection
 
-*Generated 2026-06-15. Conditioned on the 13 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify); the 8 qualifying thirds are the highest-P(qualify) third-placed teams that fit FIFA's slot table. Knockout = official 2026 bracket, favourite advances. ✓ = projected to qualify.*
+*Generated 2026-06-16. Conditioned on the 15 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify); the 8 qualifying thirds are the highest-P(qualify) third-placed teams that fit FIFA's slot table. Knockout = official 2026 bracket, favourite advances. ✓ = projected to qualify.*
 
 ```mermaid
 flowchart LR
@@ -51,14 +51,14 @@ flowchart LR
     direction TB
     g_Belgium["1. Belgium ✓"]
     g_Egypt["2. Egypt ✓"]
-    g_Iran["3. Iran ✓"]
+    g_Iran["3. Iran"]
     g_New_Zealand["4. New Zealand"]
   end
   subgraph GH["Group H"]
     direction TB
-    g_Uruguay["1. Uruguay ✓"]
-    g_Spain["2. Spain ✓"]
-    g_Cape_Verde["3. Cape Verde"]
+    g_Spain["1. Spain ✓"]
+    g_Uruguay["2. Uruguay ✓"]
+    g_Cape_Verde["3. Cape Verde ✓"]
     g_Saudi_Arabia["4. Saudi Arabia"]
   end
   subgraph GI["Group I"]
@@ -91,114 +91,115 @@ flowchart LR
   end
   subgraph K1["Round of 16"]
     direction TB
-    r1_Canada["Canada"]
-    r1_Germany["Germany"]
-    r1_Netherlands["Netherlands"]
-    r1_Brazil["Brazil"]
-    r1_France["France"]
-    r1_Norway["Norway"]
-    r1_Sweden["Sweden"]
-    r1_England["England"]
-    r1_Algeria["Algeria"]
-    r1_Belgium["Belgium"]
-    r1_Croatia["Croatia"]
-    r1_Uruguay["Uruguay"]
-    r1_Switzerland["Switzerland"]
-    r1_Argentina["Argentina"]
-    r1_Portugal["Portugal"]
-    r1_Egypt["Egypt"]
+    k1_Canada["Canada"]
+    k1_Germany["Germany"]
+    k1_Netherlands["Netherlands"]
+    k1_Brazil["Brazil"]
+    k1_France["France"]
+    k1_Norway["Norway"]
+    k1_Senegal["Senegal"]
+    k1_England["England"]
+    k1_Algeria["Algeria"]
+    k1_Belgium["Belgium"]
+    k1_Croatia["Croatia"]
+    k1_Spain["Spain"]
+    k1_Switzerland["Switzerland"]
+    k1_Argentina["Argentina"]
+    k1_Portugal["Portugal"]
+    k1_Egypt["Egypt"]
   end
   subgraph K2["Quarter-finals"]
     direction TB
-    r2_Germany["Germany"]
-    r2_Netherlands["Netherlands"]
-    r2_Brazil["Brazil"]
-    r2_England["England"]
-    r2_Uruguay["Uruguay"]
-    r2_Belgium["Belgium"]
-    r2_Argentina["Argentina"]
-    r2_Portugal["Portugal"]
+    k2_Germany["Germany"]
+    k2_Netherlands["Netherlands"]
+    k2_Brazil["Brazil"]
+    k2_England["England"]
+    k2_Spain["Spain"]
+    k2_Belgium["Belgium"]
+    k2_Argentina["Argentina"]
+    k2_Portugal["Portugal"]
   end
   subgraph K3["Semi-finals"]
     direction TB
-    r3_Germany["Germany"]
-    r3_Belgium["Belgium"]
-    r3_England["England"]
-    r3_Portugal["Portugal"]
+    k3_Germany["Germany"]
+    k3_Spain["Spain"]
+    k3_England["England"]
+    k3_Portugal["Portugal"]
   end
   subgraph K4["Final"]
     direction TB
-    r4_Germany["Germany"]
-    r4_England["England"]
+    k4_Germany["Germany"]
+    k4_England["England"]
   end
   subgraph KC["Champion"]
     champ["🏆 England"]
   end
-  g_South_Korea --> r1_Canada
-  g_Canada --> r1_Canada
-  g_Germany --> r1_Germany
-  g_Bosnia_and_Herzegovina --> r1_Germany
-  g_Netherlands --> r1_Netherlands
-  g_Scotland --> r1_Netherlands
-  g_Brazil --> r1_Brazil
-  g_Japan --> r1_Brazil
-  g_France --> r1_France
-  g_Morocco --> r1_France
-  g_Ivory_Coast --> r1_Norway
-  g_Norway --> r1_Norway
-  g_Mexico --> r1_Sweden
-  g_Sweden --> r1_Sweden
-  g_England --> r1_England
-  g_DR_Congo --> r1_England
-  g_USA --> r1_Algeria
-  g_Algeria --> r1_Algeria
-  g_Belgium --> r1_Belgium
-  g_Senegal --> r1_Belgium
-  g_Colombia --> r1_Croatia
-  g_Croatia --> r1_Croatia
-  g_Uruguay --> r1_Uruguay
-  g_Austria --> r1_Uruguay
-  g_Switzerland --> r1_Switzerland
-  g_Iran --> r1_Switzerland
-  g_Argentina --> r1_Argentina
-  g_Spain --> r1_Argentina
-  g_Portugal --> r1_Portugal
-  g_Ghana --> r1_Portugal
-  g_Australia --> r1_Egypt
-  g_Egypt --> r1_Egypt
-  r1_Germany --> r2_Germany
-  r1_France --> r2_Germany
-  r1_Canada --> r2_Netherlands
-  r1_Netherlands --> r2_Netherlands
-  r1_Brazil --> r2_Brazil
-  r1_Norway --> r2_Brazil
-  r1_Sweden --> r2_England
-  r1_England --> r2_England
-  r1_Croatia --> r2_Uruguay
-  r1_Uruguay --> r2_Uruguay
-  r1_Algeria --> r2_Belgium
-  r1_Belgium --> r2_Belgium
-  r1_Argentina --> r2_Argentina
-  r1_Egypt --> r2_Argentina
-  r1_Switzerland --> r2_Portugal
-  r1_Portugal --> r2_Portugal
-  r2_Germany --> r3_Germany
-  r2_Netherlands --> r3_Germany
-  r2_Uruguay --> r3_Belgium
-  r2_Belgium --> r3_Belgium
-  r2_Brazil --> r3_England
-  r2_England --> r3_England
-  r2_Argentina --> r3_Portugal
-  r2_Portugal --> r3_Portugal
-  r3_Germany --> r4_Germany
-  r3_Belgium --> r4_Germany
-  r3_England --> r4_England
-  r3_Portugal --> r4_England
-  r4_Germany --> champ
-  r4_England --> champ
+  g_South_Korea --> k1_Canada
+  g_Canada --> k1_Canada
+  g_Germany --> k1_Germany
+  g_Bosnia_and_Herzegovina --> k1_Germany
+  g_Netherlands --> k1_Netherlands
+  g_Scotland --> k1_Netherlands
+  g_Brazil --> k1_Brazil
+  g_Japan --> k1_Brazil
+  g_France --> k1_France
+  g_Morocco --> k1_France
+  g_Ivory_Coast --> k1_Norway
+  g_Norway --> k1_Norway
+  g_Mexico --> k1_Senegal
+  g_Senegal --> k1_Senegal
+  g_England --> k1_England
+  g_DR_Congo --> k1_England
+  g_USA --> k1_Algeria
+  g_Algeria --> k1_Algeria
+  g_Belgium --> k1_Belgium
+  g_Cape_Verde --> k1_Belgium
+  g_Colombia --> k1_Croatia
+  g_Croatia --> k1_Croatia
+  g_Spain --> k1_Spain
+  g_Austria --> k1_Spain
+  g_Switzerland --> k1_Switzerland
+  g_Sweden --> k1_Switzerland
+  g_Argentina --> k1_Argentina
+  g_Uruguay --> k1_Argentina
+  g_Portugal --> k1_Portugal
+  g_Ghana --> k1_Portugal
+  g_Australia --> k1_Egypt
+  g_Egypt --> k1_Egypt
+  k1_Germany --> k2_Germany
+  k1_France --> k2_Germany
+  k1_Canada --> k2_Netherlands
+  k1_Netherlands --> k2_Netherlands
+  k1_Brazil --> k2_Brazil
+  k1_Norway --> k2_Brazil
+  k1_Senegal --> k2_England
+  k1_England --> k2_England
+  k1_Croatia --> k2_Spain
+  k1_Spain --> k2_Spain
+  k1_Algeria --> k2_Belgium
+  k1_Belgium --> k2_Belgium
+  k1_Argentina --> k2_Argentina
+  k1_Egypt --> k2_Argentina
+  k1_Switzerland --> k2_Portugal
+  k1_Portugal --> k2_Portugal
+  k2_Germany --> k3_Germany
+  k2_Netherlands --> k3_Germany
+  k2_Spain --> k3_Spain
+  k2_Belgium --> k3_Spain
+  k2_Brazil --> k3_England
+  k2_England --> k3_England
+  k2_Argentina --> k3_Portugal
+  k2_Portugal --> k3_Portugal
+  k3_Germany --> k4_Germany
+  k3_Spain --> k4_Germany
+  k3_England --> k4_England
+  k3_Portugal --> k4_England
+  k4_Germany --> champ
+  k4_England --> champ
   class champ champ;
 ```
 
 **Projected champion: England.** Single most-likely path (favourite advances); exact probability is tiny — see the title-odds table for the real distribution.
 
-**Notes:** Spain's 0–0 with Cape Verde flips Group H — Uruguay is now the marginal group winner (40% vs Spain 38%), an effective coin-flip. The best-third cut falls between DR Congo (58% qualify, in) and Cape Verde (57%, out).
+**Best-third cut (by P qualify):** in — Morocco 77%, Sweden 77%, Ghana 69%, Algeria 68%, Senegal 66%, Bosnia and Herzegovina 65%, DR Congo 59%, Cape Verde 57%.
+  Out — Czechia 52%, Iran 51%, Turkey 45%, Ecuador 39%.

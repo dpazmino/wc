@@ -203,3 +203,17 @@ flowchart LR
 
 **Best-third cut (by P qualify):** in — Morocco 78%, Japan 77%, Ghana 69%, DR Congo 66%, Bosnia and Herzegovina 65%, Cape Verde 57%, Senegal 53%, Czechia 52%.
   Out — Iran 51%, Algeria 49%, Turkey 46%, Ecuador 40%.
+
+## Projected finish by team (most-likely bracket)
+
+*Each team mapped to the single stage it is eliminated at in the favourite-advances bracket above. This is one most-likely scenario (every favourite wins), not a probability — see WORLD_CUP_2026_ELIMINATION.md for the full per-stage odds.*
+
+| Stage | Teams |
+|---|---|
+| **Winner** (1) | France |
+| **Runner-Up** (1) | England |
+| **Semi-Finals** (2) | Argentina, Spain |
+| **Quarter-Finals** (4) | Belgium, Brazil, Netherlands, Portugal |
+| **Last 16** (8) | Canada, Croatia, Egypt, Germany, Norway, Senegal, Switzerland, USA |
+| **Last 32** (16) | Australia, Austria, Bosnia and Herzegovina, Cape Verde, Colombia, Czechia, DR Congo, Ghana, Ivory Coast, Japan, Mexico, Morocco, Scotland, South Korea, Sweden, Uruguay |
+| **Group Stage** (16) | Algeria, Curacao, Ecuador, Haiti, Iran, Iraq, Jordan, New Zealand, Panama, Paraguay, Qatar, Saudi Arabia, South Africa, Tunisia, Turkey, Uzbekistan |

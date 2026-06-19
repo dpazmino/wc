@@ -1,16 +1,7 @@
-# Match Predictions — Remaining Group Stage (Jun 18–27)
+# Match Predictions — Remaining Group Stage
 
-*Strength model (shrink 0.25, DRAW_BASE 0.45). **Host nations (USA/Mexico/Canada) get home advantage** in their group games — marked **(H)**; all other matches neutral venue. No DraftKings lines captured, so model-only. W/D/L = home / draw / away %.*
+*Strength model (shrink 0.25, DRAW_BASE 0.45). **Host nations (USA/Mexico/Canada) get home advantage** in their group games — marked **(H)**; all other matches neutral venue. No DraftKings lines captured, so model-only. W/D/L = home / draw / away %. Fixtures already in `data/results.csv` are skipped (4 played so far, 44 upcoming).*
 
-
-## Thu Jun 18
-
-| Grp | Match | W / D / L | xG | Verdict |
-|:--:|---|:--:|:--:|---|
-| A | Czechia vs South Africa | 46 / 25 / 29 | 1.4–1.2 | Slight lean Czechia |
-| B | Switzerland vs Bosnia & Herzegovina | 48 / 24 / 27 | 1.5–1.1 | Slight lean Switzerland |
-| B | Canada vs Qatar  ·_Canada (H)_ | 50 / 24 / 26 | 1.5–1.1 | Slight lean Canada |
-| A | Mexico vs South Korea  ·_Mexico (H)_ | 47 / 26 / 28 | 1.5–1.1 | Slight lean Mexico |
 
 ## Fri Jun 19
 
@@ -53,15 +44,15 @@
 | Grp | Match | W / D / L | xG | Verdict |
 |:--:|---|:--:|:--:|---|
 | K | Portugal vs Uzbekistan | 66 / 18 / 16 | 1.8–0.8 | Portugal strong |
-| L | England vs Ghana | 60 / 20 / 20 | 1.7–0.9 | England favoured |
-| L | Panama vs Croatia | 18 / 18 / 64 | 0.8–1.8 | Croatia strong |
-| K | Colombia vs DR Congo | 43 / 26 / 31 | 1.4–1.2 | Slight lean Colombia |
+| L | England vs Ghana | 60 / 19 / 20 | 1.7–0.9 | England favoured |
+| L | Panama vs Croatia | 18 / 18 / 63 | 0.8–1.8 | Croatia strong |
+| K | Colombia vs DR Congo | 43 / 26 / 31 | 1.5–1.1 | Slight lean Colombia |
 
 ## Wed Jun 24
 
 | Grp | Match | W / D / L | xG | Verdict |
 |:--:|---|:--:|:--:|---|
-| B | Switzerland vs Canada  ·_Canada (H)_ | 41 / 27 / 32 | 1.5–1.1 | Slight lean Switzerland |
+| B | Switzerland vs Canada  ·_Canada (H)_ | 41 / 28 / 32 | 1.4–1.2 | Slight lean Switzerland |
 | B | Bosnia & Herzegovina vs Qatar | 44 / 26 / 30 | 1.4–1.2 | Slight lean Bosnia & Herzegovina |
 | C | Scotland vs Brazil | 23 / 22 / 54 | 1.1–1.5 | Brazil favoured |
 | C | Morocco vs Haiti | 53 / 23 / 24 | 1.6–1.0 | Morocco favoured |
@@ -94,11 +85,11 @@
 
 | Grp | Match | W / D / L | xG | Verdict |
 |:--:|---|:--:|:--:|---|
-| L | Panama vs England | 13 / 14 / 73 | 0.5–2.1 | England strong |
-| L | Croatia vs Ghana | 41 / 28 / 31 | 1.4–1.2 | Slight lean Croatia |
-| K | Colombia vs Portugal | 26 / 24 / 50 | 1.1–1.5 | Portugal favoured |
-| K | DR Congo vs Uzbekistan | 43 / 26 / 31 | 1.4–1.2 | Slight lean DR Congo |
+| L | Panama vs England | 13 / 14 / 74 | 0.5–2.1 | England strong |
+| L | Croatia vs Ghana | 40 / 29 / 31 | 1.4–1.2 | Coin flip |
+| K | Colombia vs Portugal | 26 / 25 / 49 | 1.1–1.5 | Slight lean Portugal |
+| K | DR Congo vs Uzbekistan | 43 / 26 / 31 | 1.5–1.1 | Slight lean DR Congo |
 | J | Algeria vs Austria | 32 / 27 / 41 | 1.2–1.4 | Slight lean Austria |
 | J | Jordan vs Argentina | 14 / 17 / 69 | 0.6–2.0 | Argentina strong |
 
-*Reproduce: `python gen_remaining_preds.py` (reads `downloads/preds.txt` fixtures). Host advantage applied per `tournament.py` convention.*
+*Reproduce: `python gen_remaining_preds.py` (reads `downloads/preds.txt` fixtures; skips games already played). Host advantage per `tournament.py`.*

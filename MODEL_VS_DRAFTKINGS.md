@@ -91,13 +91,14 @@ under-covered-but-strong (Ivory Coast) profile count as genuine tests.*
 
 | Logged | Bet | Model | DK (de-vig) | Result | Verdict |
 |---|---|---|---|---|:--:|
-| 06-16 | **Ghana to qualify** (reach Last 32+) | 69% | ~54% | TBD | — |
-| 06-16 | **DR Congo to qualify** (reach Last 32+) | 59% | ~46% | TBD | — |
+| 06-16 | **Ghana to qualify** (reach Last 32+) | 69% | ~54% | TBD — won 1-0 vs Panama (3 pts, 2 to play) | on track |
+| 06-16 | **DR Congo to qualify** (reach Last 32+) | 59% | ~46% | TBD — drew Portugal 1-1 (1 pt, 2 to play) | on track |
 
 Both are the CIV thesis restated for the qualify market: an under-covered African side the
 model rates a stronger advancer than a US book does. **Thesis-tests, not locks** — the market
-may simply know the squad is weaker than its rating. Ghana (Grp L) and DR Congo (Grp K) both
-kick off 2026-06-17; mark the result once their group stage completes.
+may simply know the squad is weaker than its rating. **Both opened well on 06-17** — Ghana beat
+Panama, DR Congo took a point off Portugal — but neither has clinched; mark the final result
+once their group completes (Ghana plays England/Croatia, DR Congo plays Colombia/Uzbekistan).
 
 **Fades logged for honesty** (model miscalibration, *not* edge, so not bets): Tunisia/Uzbekistan
 to advance (over-rating minnows); Argentina/France/Portugal to exit early (under-confidence in

@@ -1,6 +1,6 @@
 # 2026 FIFA World Cup — Live Group-to-Bracket Projection
 
-*Generated 2026-06-16. Conditioned on the 20 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify); the 8 qualifying thirds are the highest-P(qualify) third-placed teams that fit FIFA's slot table. Knockout = official 2026 bracket, favourite advances. ✓ = projected to qualify.*
+*Generated 2026-06-16. Conditioned on the 27 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify); the 8 qualifying thirds are the highest-P(qualify) third-placed teams that fit FIFA's slot table. Knockout = official 2026 bracket, favourite advances. ✓ = projected to qualify.*
 
 ```mermaid
 flowchart LR
@@ -9,14 +9,14 @@ flowchart LR
     direction TB
     g_Mexico["1. Mexico ✓"]
     g_South_Korea["2. South Korea ✓"]
-    g_Czechia["3. Czechia ✓"]
-    g_South_Africa["4. South Africa"]
+    g_South_Africa["3. South Africa"]
+    g_Czechia["4. Czechia"]
   end
   subgraph GB["Group B"]
     direction TB
-    g_Switzerland["1. Switzerland ✓"]
-    g_Canada["2. Canada ✓"]
-    g_Bosnia_and_Herzegovina["3. Bosnia and Herzegovina ✓"]
+    g_Canada["1. Canada ✓"]
+    g_Switzerland["2. Switzerland ✓"]
+    g_Bosnia_and_Herzegovina["3. Bosnia and Herzegovina"]
     g_Qatar["4. Qatar"]
   end
   subgraph GC["Group C"]
@@ -51,7 +51,7 @@ flowchart LR
     direction TB
     g_Belgium["1. Belgium ✓"]
     g_Egypt["2. Egypt ✓"]
-    g_Iran["3. Iran"]
+    g_Iran["3. Iran ✓"]
     g_New_Zealand["4. New Zealand"]
   end
   subgraph GH["Group H"]
@@ -72,26 +72,26 @@ flowchart LR
     direction TB
     g_Argentina["1. Argentina ✓"]
     g_Austria["2. Austria ✓"]
-    g_Algeria["3. Algeria"]
+    g_Algeria["3. Algeria ✓"]
     g_Jordan["4. Jordan"]
   end
   subgraph GK["Group K"]
     direction TB
-    g_Portugal["1. Portugal ✓"]
-    g_Colombia["2. Colombia ✓"]
+    g_Colombia["1. Colombia ✓"]
+    g_Portugal["2. Portugal ✓"]
     g_DR_Congo["3. DR Congo ✓"]
     g_Uzbekistan["4. Uzbekistan"]
   end
   subgraph GL["Group L"]
     direction TB
     g_England["1. England ✓"]
-    g_Croatia["2. Croatia ✓"]
-    g_Ghana["3. Ghana ✓"]
+    g_Ghana["2. Ghana ✓"]
+    g_Croatia["3. Croatia ✓"]
     g_Panama["4. Panama"]
   end
   subgraph K1["Round of 16"]
     direction TB
-    k1_Canada["Canada"]
+    k1_Switzerland["Switzerland"]
     k1_Germany["Germany"]
     k1_Netherlands["Netherlands"]
     k1_Brazil["Brazil"]
@@ -99,13 +99,13 @@ flowchart LR
     k1_Norway["Norway"]
     k1_Senegal["Senegal"]
     k1_England["England"]
-    k1_USA["USA"]
+    k1_Japan["Japan"]
     k1_Belgium["Belgium"]
-    k1_Croatia["Croatia"]
-    k1_Spain["Spain"]
-    k1_Switzerland["Switzerland"]
-    k1_Argentina["Argentina"]
     k1_Portugal["Portugal"]
+    k1_Spain["Spain"]
+    k1_Algeria["Algeria"]
+    k1_Argentina["Argentina"]
+    k1_Colombia["Colombia"]
     k1_Egypt["Egypt"]
   end
   subgraph K2["Quarter-finals"]
@@ -114,15 +114,15 @@ flowchart LR
     k2_Netherlands["Netherlands"]
     k2_Brazil["Brazil"]
     k2_England["England"]
-    k2_Spain["Spain"]
+    k2_Portugal["Portugal"]
     k2_Belgium["Belgium"]
     k2_Argentina["Argentina"]
-    k2_Portugal["Portugal"]
+    k2_Colombia["Colombia"]
   end
   subgraph K3["Semi-finals"]
     direction TB
     k3_France["France"]
-    k3_Spain["Spain"]
+    k3_Portugal["Portugal"]
     k3_England["England"]
     k3_Argentina["Argentina"]
   end
@@ -132,66 +132,66 @@ flowchart LR
     k4_England["England"]
   end
   subgraph KC["Champion"]
-    champ["🏆 France"]
+    champ["🏆 England"]
   end
-  g_South_Korea --> k1_Canada
-  g_Canada --> k1_Canada
+  g_South_Korea --> k1_Switzerland
+  g_Switzerland --> k1_Switzerland
   g_Germany --> k1_Germany
-  g_Czechia --> k1_Germany
+  g_Morocco --> k1_Germany
   g_Netherlands --> k1_Netherlands
   g_Scotland --> k1_Netherlands
   g_Brazil --> k1_Brazil
   g_Sweden --> k1_Brazil
   g_France --> k1_France
-  g_Morocco --> k1_France
+  g_Iran --> k1_France
   g_Ivory_Coast --> k1_Norway
   g_Norway --> k1_Norway
   g_Mexico --> k1_Senegal
   g_Senegal --> k1_Senegal
   g_England --> k1_England
   g_DR_Congo --> k1_England
-  g_USA --> k1_USA
-  g_Bosnia_and_Herzegovina --> k1_USA
+  g_USA --> k1_Japan
+  g_Japan --> k1_Japan
   g_Belgium --> k1_Belgium
   g_Cape_Verde --> k1_Belgium
-  g_Colombia --> k1_Croatia
-  g_Croatia --> k1_Croatia
-  g_Spain --> k1_Spain
-  g_Austria --> k1_Spain
-  g_Switzerland --> k1_Switzerland
-  g_Japan --> k1_Switzerland
-  g_Argentina --> k1_Argentina
-  g_Uruguay --> k1_Argentina
   g_Portugal --> k1_Portugal
   g_Ghana --> k1_Portugal
+  g_Spain --> k1_Spain
+  g_Austria --> k1_Spain
+  g_Canada --> k1_Algeria
+  g_Algeria --> k1_Algeria
+  g_Argentina --> k1_Argentina
+  g_Uruguay --> k1_Argentina
+  g_Colombia --> k1_Colombia
+  g_Croatia --> k1_Colombia
   g_Australia --> k1_Egypt
   g_Egypt --> k1_Egypt
   k1_Germany --> k2_France
   k1_France --> k2_France
-  k1_Canada --> k2_Netherlands
+  k1_Switzerland --> k2_Netherlands
   k1_Netherlands --> k2_Netherlands
   k1_Brazil --> k2_Brazil
   k1_Norway --> k2_Brazil
   k1_Senegal --> k2_England
   k1_England --> k2_England
-  k1_Croatia --> k2_Spain
-  k1_Spain --> k2_Spain
-  k1_USA --> k2_Belgium
+  k1_Portugal --> k2_Portugal
+  k1_Spain --> k2_Portugal
+  k1_Japan --> k2_Belgium
   k1_Belgium --> k2_Belgium
   k1_Argentina --> k2_Argentina
   k1_Egypt --> k2_Argentina
-  k1_Switzerland --> k2_Portugal
-  k1_Portugal --> k2_Portugal
+  k1_Algeria --> k2_Colombia
+  k1_Colombia --> k2_Colombia
   k2_France --> k3_France
   k2_Netherlands --> k3_France
-  k2_Spain --> k3_Spain
-  k2_Belgium --> k3_Spain
+  k2_Portugal --> k3_Portugal
+  k2_Belgium --> k3_Portugal
   k2_Brazil --> k3_England
   k2_England --> k3_England
   k2_Argentina --> k3_Argentina
-  k2_Portugal --> k3_Argentina
+  k2_Colombia --> k3_Argentina
   k3_France --> k4_France
-  k3_Spain --> k4_France
+  k3_Portugal --> k4_France
   k3_England --> k4_England
   k3_Argentina --> k4_England
   k4_France --> champ
@@ -199,10 +199,10 @@ flowchart LR
   class champ champ;
 ```
 
-**Projected champion: France.** Single most-likely path (favourite advances); exact probability is tiny — see the title-odds table for the real distribution.
+**Projected champion: England.** Single most-likely path (favourite advances); exact probability is tiny — see the title-odds table for the real distribution.
 
-**Best-third cut (by P qualify):** in — Morocco 78%, Japan 77%, Ghana 69%, DR Congo 66%, Bosnia and Herzegovina 65%, Cape Verde 57%, Senegal 53%, Czechia 52%.
-  Out — Iran 51%, Algeria 49%, Turkey 46%, Ecuador 40%.
+**Best-third cut (by P qualify):** in — Morocco 78%, Japan 77%, Croatia 68%, DR Congo 67%, Cape Verde 57%, Senegal 54%, Iran 51%, Algeria 50%.
+  Out — Turkey 47%, Bosnia and Herzegovina 44%, Ecuador 41%, South Africa 33%.
 
 ## Projected finish by team (most-likely bracket)
 
@@ -210,10 +210,10 @@ flowchart LR
 
 | Stage | Teams |
 |---|---|
-| **Winner** (1) | France |
-| **Runner-Up** (1) | England |
-| **Semi-Finals** (2) | Argentina, Spain |
-| **Quarter-Finals** (4) | Belgium, Brazil, Netherlands, Portugal |
-| **Last 16** (8) | Canada, Croatia, Egypt, Germany, Norway, Senegal, Switzerland, USA |
-| **Last 32** (16) | Australia, Austria, Bosnia and Herzegovina, Cape Verde, Colombia, Czechia, DR Congo, Ghana, Ivory Coast, Japan, Mexico, Morocco, Scotland, South Korea, Sweden, Uruguay |
-| **Group Stage** (16) | Algeria, Curacao, Ecuador, Haiti, Iran, Iraq, Jordan, New Zealand, Panama, Paraguay, Qatar, Saudi Arabia, South Africa, Tunisia, Turkey, Uzbekistan |
+| **Winner** (1) | England |
+| **Runner-Up** (1) | France |
+| **Semi-Finals** (2) | Argentina, Portugal |
+| **Quarter-Finals** (4) | Belgium, Brazil, Colombia, Netherlands |
+| **Last 16** (8) | Algeria, Egypt, Germany, Japan, Norway, Senegal, Spain, Switzerland |
+| **Last 32** (16) | Australia, Austria, Canada, Cape Verde, Croatia, DR Congo, Ghana, Iran, Ivory Coast, Mexico, Morocco, Scotland, South Korea, Sweden, USA, Uruguay |
+| **Group Stage** (16) | Bosnia and Herzegovina, Curacao, Czechia, Ecuador, Haiti, Iraq, Jordan, New Zealand, Panama, Paraguay, Qatar, Saudi Arabia, South Africa, Tunisia, Turkey, Uzbekistan |

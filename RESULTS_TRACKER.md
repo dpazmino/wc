@@ -33,11 +33,15 @@ Brier = squared error for that game (lower is better; a blind 1/3-1/3-1/3 guess 
 | Switzerland vs Bosnia & Herz. | 48/24/27 | Switzerland | 4-1 (Switzerland) | ✅ | 0.40 |
 | Canada vs Qatar (H) | 50/24/26 | Canada | 6-0 (Canada) | ✅ | 0.38 |
 | Mexico vs South Korea (H) | 47/26/28 | Mexico | 1-0 (Mexico) | ✅ | 0.43 |
+| USA vs Australia (H) | 58/21/21 | USA | 2-0 (USA) | ✅ | 0.26 |
+| Scotland vs Morocco | 32/29/39 | Morocco | 0-1 (Morocco) | ✅ | 0.56 |
+| Brazil vs Haiti | 65/18/16 | Brazil | 3-0 (Brazil) | ✅ | 0.18 |
+| Türkiye vs Paraguay | 46/25/29 | Türkiye | 0-1 (Paraguay) | ❌ | 0.78 |
 
-## Scoreboard (27 games)
-- **Top-pick accuracy: 15 / 27** (Mexico, USA, Scotland, Germany, Ivory Coast, France, Norway, Argentina, Austria, England, Ghana, Colombia, Switzerland, Canada)
-- **Avg Brier (model): 0.589**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
-- **Draws: 10 / 27** · **Outright upsets against the model: 2 / 27** (South Korea, Australia)
+## Scoreboard (31 games)
+- **Top-pick accuracy: 18 / 31** (Mexico, USA, Scotland, Germany, Ivory Coast, France, Norway, Argentina, Austria, England, Ghana, Colombia, Switzerland, Canada, Morocco, Brazil)
+- **Avg Brier (model): 0.570**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
+- **Draws: 10 / 31** · **Outright upsets against the model: 3 / 31** (South Korea, Australia, Paraguay)
 
 ## Honest read
 The June 16 slate (France, Norway, Argentina all winning as favourites, slate Brier 0.27)
@@ -67,4 +71,4 @@ June 17 split (Austria win, Portugal 1-1 DR Congo) held it there.
 - **Fade vindicated:** Colombia 1-3'd Uzbekistan as DK's −250 implied (71%) — the model's
   diffuse 51% was the worse number, exactly why I flagged Uzbekistan-to-advance as a fade, not edge.
 
-*Updated through the June 18 Group A/B matchday (Czechia–South Africa … Mexico–South Korea).*
+*Updated through the June 19 Group C/D matchday (USA–Australia … Türkiye–Paraguay).*

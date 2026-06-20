@@ -1,6 +1,6 @@
 # 2026 FIFA World Cup — Live Group-to-Bracket Projection
 
-*Generated 2026-06-16. Conditioned on the 27 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify); the 8 qualifying thirds are the highest-P(qualify) third-placed teams that fit FIFA's slot table. Knockout = official 2026 bracket, favourite advances. ✓ = projected to qualify.*
+*Generated 2026-06-16. Conditioned on the 31 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify); the 8 qualifying thirds are the highest-P(qualify) third-placed teams that fit FIFA's slot table. Knockout = official 2026 bracket, favourite advances. ✓ = projected to qualify.*
 
 ```mermaid
 flowchart LR
@@ -22,16 +22,16 @@ flowchart LR
   subgraph GC["Group C"]
     direction TB
     g_Brazil["1. Brazil ✓"]
-    g_Scotland["2. Scotland ✓"]
-    g_Morocco["3. Morocco ✓"]
+    g_Morocco["2. Morocco ✓"]
+    g_Scotland["3. Scotland ✓"]
     g_Haiti["4. Haiti"]
   end
   subgraph GD["Group D"]
     direction TB
     g_USA["1. USA ✓"]
     g_Australia["2. Australia ✓"]
-    g_Turkey["3. Turkey"]
-    g_Paraguay["4. Paraguay"]
+    g_Paraguay["3. Paraguay ✓"]
+    g_Turkey["4. Turkey"]
   end
   subgraph GE["Group E"]
     direction TB
@@ -72,7 +72,7 @@ flowchart LR
     direction TB
     g_Argentina["1. Argentina ✓"]
     g_Austria["2. Austria ✓"]
-    g_Algeria["3. Algeria ✓"]
+    g_Algeria["3. Algeria"]
     g_Jordan["4. Jordan"]
   end
   subgraph GK["Group K"]
@@ -103,7 +103,7 @@ flowchart LR
     k1_Belgium["Belgium"]
     k1_Portugal["Portugal"]
     k1_Spain["Spain"]
-    k1_Algeria["Algeria"]
+    k1_Canada["Canada"]
     k1_Argentina["Argentina"]
     k1_Colombia["Colombia"]
     k1_Egypt["Egypt"]
@@ -137,13 +137,13 @@ flowchart LR
   g_South_Korea --> k1_Switzerland
   g_Switzerland --> k1_Switzerland
   g_Germany --> k1_Germany
-  g_Morocco --> k1_Germany
+  g_Scotland --> k1_Germany
   g_Netherlands --> k1_Netherlands
-  g_Scotland --> k1_Netherlands
+  g_Morocco --> k1_Netherlands
   g_Brazil --> k1_Brazil
   g_Sweden --> k1_Brazil
   g_France --> k1_France
-  g_Iran --> k1_France
+  g_Paraguay --> k1_France
   g_Ivory_Coast --> k1_Norway
   g_Norway --> k1_Norway
   g_Mexico --> k1_Senegal
@@ -158,8 +158,8 @@ flowchart LR
   g_Ghana --> k1_Portugal
   g_Spain --> k1_Spain
   g_Austria --> k1_Spain
-  g_Canada --> k1_Algeria
-  g_Algeria --> k1_Algeria
+  g_Canada --> k1_Canada
+  g_Iran --> k1_Canada
   g_Argentina --> k1_Argentina
   g_Uruguay --> k1_Argentina
   g_Colombia --> k1_Colombia
@@ -180,7 +180,7 @@ flowchart LR
   k1_Belgium --> k2_Belgium
   k1_Argentina --> k2_Argentina
   k1_Egypt --> k2_Argentina
-  k1_Algeria --> k2_Colombia
+  k1_Canada --> k2_Colombia
   k1_Colombia --> k2_Colombia
   k2_France --> k3_France
   k2_Netherlands --> k3_France
@@ -201,8 +201,8 @@ flowchart LR
 
 **Projected champion: England.** Single most-likely path (favourite advances); exact probability is tiny — see the title-odds table for the real distribution.
 
-**Best-third cut (by P qualify):** in — Morocco 78%, Japan 77%, Croatia 68%, DR Congo 67%, Cape Verde 57%, Senegal 54%, Iran 51%, Algeria 50%.
-  Out — Turkey 47%, Bosnia and Herzegovina 44%, Ecuador 41%, South Africa 33%.
+**Best-third cut (by P qualify):** in — Paraguay 77%, Japan 77%, Scotland 77%, Croatia 68%, DR Congo 68%, Cape Verde 57%, Senegal 55%, Iran 51%.
+  Out — Algeria 50%, Bosnia and Herzegovina 44%, Ecuador 42%, South Africa 33%.
 
 ## Projected finish by team (most-likely bracket)
 
@@ -214,6 +214,6 @@ flowchart LR
 | **Runner-Up** (1) | France |
 | **Semi-Finals** (2) | Argentina, Portugal |
 | **Quarter-Finals** (4) | Belgium, Brazil, Colombia, Netherlands |
-| **Last 16** (8) | Algeria, Egypt, Germany, Japan, Norway, Senegal, Spain, Switzerland |
-| **Last 32** (16) | Australia, Austria, Canada, Cape Verde, Croatia, DR Congo, Ghana, Iran, Ivory Coast, Mexico, Morocco, Scotland, South Korea, Sweden, USA, Uruguay |
-| **Group Stage** (16) | Bosnia and Herzegovina, Curacao, Czechia, Ecuador, Haiti, Iraq, Jordan, New Zealand, Panama, Paraguay, Qatar, Saudi Arabia, South Africa, Tunisia, Turkey, Uzbekistan |
+| **Last 16** (8) | Canada, Egypt, Germany, Japan, Norway, Senegal, Spain, Switzerland |
+| **Last 32** (16) | Australia, Austria, Cape Verde, Croatia, DR Congo, Ghana, Iran, Ivory Coast, Mexico, Morocco, Paraguay, Scotland, South Korea, Sweden, USA, Uruguay |
+| **Group Stage** (16) | Algeria, Bosnia and Herzegovina, Curacao, Czechia, Ecuador, Haiti, Iraq, Jordan, New Zealand, Panama, Qatar, Saudi Arabia, South Africa, Tunisia, Turkey, Uzbekistan |

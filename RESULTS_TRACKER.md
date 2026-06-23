@@ -37,11 +37,23 @@ Brier = squared error for that game (lower is better; a blind 1/3-1/3-1/3 guess 
 | Scotland vs Morocco | 32/29/39 | Morocco | 0-1 (Morocco) | ✅ | 0.56 |
 | Brazil vs Haiti | 65/18/16 | Brazil | 3-0 (Brazil) | ✅ | 0.18 |
 | Türkiye vs Paraguay | 46/25/29 | Türkiye | 0-1 (Paraguay) | ❌ | 0.78 |
+| Netherlands vs Sweden | 47/25/28 | Netherlands | 5-1 (Netherlands) | ✅ | 0.42 |
+| Germany vs Ivory Coast | 54/22/24 | Germany | 2-1 (Germany) | ✅ | 0.32 |
+| Ecuador vs Curaçao | 42/27/32 | Ecuador | 0-0 (Draw) | ❌ | 0.81 |
+| Tunisia vs Japan | 22/21/57 | Japan | 0-4 (Japan) | ✅ | 0.28 |
+| Spain vs Saudi Arabia | 66/18/17 | Spain | 4-0 (Spain) | ✅ | 0.18 |
+| Belgium vs Iran | 58/20/22 | Belgium | 0-0 (Draw) | ❌ | 1.02 |
+| Uruguay vs Cape Verde | 56/22/22 | Uruguay | 2-2 (Draw) | ❌ | 0.97 |
+| New Zealand vs Egypt | 21/21/58 | Egypt | 1-3 (Egypt) | ✅ | 0.26 |
+| Argentina vs Austria | 51/23/26 | Argentina | 2-0 (Argentina) | ✅ | 0.36 |
+| Norway vs Senegal | 43/26/31 | Norway | 3-2 (Norway) | ✅ | 0.49 |
+| France vs Iraq | 70/16/14 | France | 3-0 (France) | ✅ | 0.14 |
+| Jordan vs Algeria | 24/22/54 | Algeria | 1-2 (Algeria) | ✅ | 0.32 |
 
-## Scoreboard (31 games)
-- **Top-pick accuracy: 18 / 31** (Mexico, USA, Scotland, Germany, Ivory Coast, France, Norway, Argentina, Austria, England, Ghana, Colombia, Switzerland, Canada, Morocco, Brazil)
-- **Avg Brier (model): 0.570**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
-- **Draws: 10 / 31** · **Outright upsets against the model: 3 / 31** (South Korea, Australia, Paraguay)
+## Scoreboard (43 games)
+- **Top-pick accuracy: 27 / 43** (Mexico, USA, Scotland, Germany, Ivory Coast, France, Norway, Argentina, Austria, England, Ghana, Colombia, Switzerland, Canada, Morocco, Brazil, Netherlands, Japan, Spain, Egypt, Algeria)
+- **Avg Brier (model): 0.540**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
+- **Draws: 13 / 43** · **Outright upsets against the model: 3 / 43** (South Korea, Australia, Paraguay)
 
 ## Honest read
 The June 16 slate (France, Norway, Argentina all winning as favourites, slate Brier 0.27)
@@ -71,4 +83,4 @@ June 17 split (Austria win, Portugal 1-1 DR Congo) held it there.
 - **Fade vindicated:** Colombia 1-3'd Uzbekistan as DK's −250 implied (71%) — the model's
   diffuse 51% was the worse number, exactly why I flagged Uzbekistan-to-advance as a fade, not edge.
 
-*Updated through the June 19 Group C/D matchday (USA–Australia … Türkiye–Paraguay).*
+*Updated through the June 22 Group I/J slate (Norway–Senegal … Jordan–Algeria).*

@@ -30,9 +30,16 @@ but it is not evidence either model belongs.
 | Date | Match | Model fav | DK fav | Result | Winner of the call |
 |---|---|---|---|---|:--:|
 | 06-13 | Côte d'Ivoire vs Ecuador | Ivory Coast (47%) | Ecuador (37%) | 1–0 Ivory Coast | **model ✅** |
+| 06-25 | Japan vs Sweden | Sweden (39%) | Japan (49%) | TBD | pending |
 
-**Record: model 1–0 DK** (n = 1). *Far too small to claim an edge — one clean call that fit
-the thesis. Needs a sample.*
+**Record: model 1–0 DK** (n = 1 resolved). *Far too small to claim an edge.*
+
+**Pending disagreement — Japan vs Sweden (06-25):** the only favourite-flip in the entire
+remaining group stage (1 of 33 fixtures; see `MODEL_VS_DK_ODDS_2026-06-21.md`). **Logged as a
+likely model *loss*, not a value bet** — it's the *reverse* of the CIV thesis (model backs a
+**European** side, Sweden, over an **in-form Asian** side, Japan, that just won 4-0; Sweden is
+a thin/backfilled squad the model over-rates and was thumped 5-1 by Netherlands). Recorded for
+honesty; expectation is DK (Japan) is right.
 
 ---
 

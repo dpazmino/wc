@@ -1,16 +1,16 @@
 # Prospective Bet Tracker — model picks vs DraftKings
 
-*Updated 2026-06-23. Flat 1-unit stakes; draw = loss (3-way moneyline). Picks + prices locked before kickoff. Three strategies: **all** picks · **rule** (DK price −127 or longer, BE ≤ 56%) · **model_ev** (model prob > break-even). PnL in units.*
+*Updated 2026-06-24. Flat 1-unit stakes; draw = loss (3-way moneyline). Picks + prices locked before kickoff. Three strategies: **all** picks · **rule** (DK price −127 or longer, BE ≤ 56%) · **model_ev** (model prob > break-even). PnL in units.*
 
 ## Running record
 
 | Strategy | Bets | Record | Net (u) | ROI | Win% | Avg BE% | Pending |
 |---|--:|:--:|--:|--:|--:|--:|--:|
-| all | 5 | 5-0 | +3.02 | +60.4% | 100% | 66% | 28 |
+| all | 9 | 8-1 | +3.27 | +36.4% | 89% | 69% | 24 |
 | rule (≤−127) | 1 | 1-0 | +1.25 | +125.0% | 100% | 44% | 12 |
 | model_ev | 0 | 0-0 | +0.00 | +0.0% | 0% | 0% | 4 |
 
-## Graded (5)
+## Graded (9)
 
 | Kickoff | Match | Pick | DK | BE% | Model% | EV | Rule | Result | PnL |
 |---|---|---|--:|--:|--:|--:|:--:|:--:|--:|
@@ -19,15 +19,15 @@
 | Tomorrow 5:00 PM | France v Iraq | France | -1200 | 92 | 70 | -24% |  | ✅ | 0.083 |
 | Tomorrow 8:00 PM | Norway v Senegal | Norway | +125 | 44 | 43 | -3% | ✓ | ✅ | 1.250 |
 | Tomorrow 11:00 PM | Jordan v Algeria | Algeria | -180 | 64 | 54 | -16% |  | ✅ | 0.556 |
+| Tue Jun 23rd 1:00 PM | Portugal v Uzbekistan | Portugal | -500 | 83 | 66 | -21% |  | ✅ | 0.200 |
+| Tue Jun 23rd 4:00 PM | England v Ghana | England | -450 | 82 | 60 | -26% |  | ❌ | -1 |
+| Tue Jun 23rd 7:00 PM | Panama v Croatia | Croatia | -185 | 65 | 63 | -2% |  | ✅ | 0.541 |
+| Tue Jun 23rd 10:00 PM | Colombia v DR Congo | Colombia | -195 | 66 | 43 | -35% |  | ✅ | 0.513 |
 
-## Pending (28)
+## Pending (24)
 
 | Kickoff | Match | Pick | DK | BE% | Model% | EV | Rule | Result | PnL |
 |---|---|---|--:|--:|--:|--:|:--:|:--:|--:|
-| Tue Jun 23rd 1:00 PM | Portugal v Uzbekistan | Portugal | -500 | 83 | 66 | -21% |  | · |  |
-| Tue Jun 23rd 4:00 PM | England v Ghana | England | -450 | 82 | 60 | -26% |  | · |  |
-| Tue Jun 23rd 7:00 PM | Panama v Croatia | Croatia | -185 | 65 | 63 | -2% |  | · |  |
-| Tue Jun 23rd 10:00 PM | Colombia v DR Congo | Colombia | -195 | 66 | 43 | -35% |  | · |  |
 | Wed Jun 24th 3:00 PM | Switzerland v Canada | Switzerland | +145 | 41 | 41 | -1% | ✓ | · |  |
 | Wed Jun 24th 3:00 PM | Bosnia and Herzegovina v Qatar | Bosnia and Herzegovina | -230 | 70 | 44 | -37% |  | · |  |
 | Wed Jun 24th 6:00 PM | Scotland v Brazil | Brazil | -245 | 71 | 55 | -23% |  | · |  |

@@ -49,11 +49,15 @@ Brier = squared error for that game (lower is better; a blind 1/3-1/3-1/3 guess 
 | Norway vs Senegal | 43/26/31 | Norway | 3-2 (Norway) | ✅ | 0.49 |
 | France vs Iraq | 70/16/14 | France | 3-0 (France) | ✅ | 0.14 |
 | Jordan vs Algeria | 24/22/54 | Algeria | 1-2 (Algeria) | ✅ | 0.32 |
+| Portugal vs Uzbekistan | 66/18/16 | Portugal | 5-0 (Portugal) | ✅ | 0.17 |
+| England vs Ghana | 60/20/20 | England | 0-0 (Draw) | ❌ | 1.04 |
+| Panama vs Croatia | 18/18/64 | Croatia | 0-1 (Croatia) | ✅ | 0.19 |
+| Colombia vs DR Congo | 43/26/31 | Colombia | 1-0 (Colombia) | ✅ | 0.49 |
 
-## Scoreboard (43 games)
-- **Top-pick accuracy: 27 / 43** (Mexico, USA, Scotland, Germany, Ivory Coast, France, Norway, Argentina, Austria, England, Ghana, Colombia, Switzerland, Canada, Morocco, Brazil, Netherlands, Japan, Spain, Egypt, Algeria)
-- **Avg Brier (model): 0.540**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
-- **Draws: 13 / 43** · **Outright upsets against the model: 3 / 43** (South Korea, Australia, Paraguay)
+## Scoreboard (47 games)
+- **Top-pick accuracy: 30 / 47** (Mexico, USA, Scotland, Germany, Ivory Coast, France, Norway, Argentina, Austria, England, Ghana, Colombia, Switzerland, Canada, Morocco, Brazil, Netherlands, Japan, Spain, Egypt, Algeria, Portugal, Croatia)
+- **Avg Brier (model): 0.535**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
+- **Draws: 14 / 47** · **Outright upsets against the model: 3 / 47** (South Korea, Australia, Paraguay)
 
 ## Honest read
 The June 16 slate (France, Norway, Argentina all winning as favourites, slate Brier 0.27)
@@ -83,4 +87,4 @@ June 17 split (Austria win, Portugal 1-1 DR Congo) held it there.
 - **Fade vindicated:** Colombia 1-3'd Uzbekistan as DK's −250 implied (71%) — the model's
   diffuse 51% was the worse number, exactly why I flagged Uzbekistan-to-advance as a fade, not edge.
 
-*Updated through the June 22 Group I/J slate (Norway–Senegal … Jordan–Algeria).*
+*Updated through the June 23 Group K/L slate (Portugal–Uzbekistan … Colombia–DR Congo).*

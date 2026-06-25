@@ -59,11 +59,13 @@ Brier = squared error for that game (lower is better; a blind 1/3-1/3-1/3 guess 
 | Morocco vs Haiti | 53/23/24 | Morocco | 4-2 (Morocco) | ✅ | 0.33 |
 | Czechia vs Mexico (H) | 31/26/43 | Mexico | 0-3 (Mexico) | ✅ | 0.49 |
 | South Africa vs South Korea | 33/28/39 | South Korea | 1-0 (South Africa) | ❌ | 0.68 |
+| Curaçao vs Ivory Coast | 24/22/54 | Ivory Coast | 0-2 (Ivory Coast) | ✅ | 0.32 |
+| Ecuador vs Germany | 18/17/65 | Germany | 2-1 (Ecuador) | ❌ | 1.12 |
 
-## Scoreboard (53 games)
-- **Top-pick accuracy: 35 / 53** (Mexico, USA, Scotland, Germany, Ivory Coast, France, Norway, Argentina, Austria, England, Ghana, Colombia, Switzerland, Canada, Morocco, Brazil, Netherlands, Japan, Spain, Egypt, Algeria, Portugal, Croatia, Bosnia)
-- **Avg Brier (model): 0.527**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
-- **Draws: 14 / 53** · **Outright upsets against the model: 3 / 53** (South Korea, Australia, Paraguay)
+## Scoreboard (55 games)
+- **Top-pick accuracy: 36 / 55** (Mexico, USA, Scotland, Germany, Ivory Coast, France, Norway, Argentina, Austria, England, Ghana, Colombia, Switzerland, Canada, Morocco, Brazil, Netherlands, Japan, Spain, Egypt, Algeria, Portugal, Croatia, Bosnia)
+- **Avg Brier (model): 0.534**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
+- **Draws: 14 / 55** · **Outright upsets against the model: 4 / 55** (South Korea, Australia, Paraguay, Ecuador)
 
 ## Honest read
 The June 16 slate (France, Norway, Argentina all winning as favourites, slate Brier 0.27)

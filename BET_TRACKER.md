@@ -6,11 +6,11 @@
 
 | Strategy | Bets | Record | Net (u) | ROI | Win% | Avg BE% | Pending |
 |---|--:|:--:|--:|--:|--:|--:|--:|
-| all | 15 | 13-2 | +5.71 | +38.1% | 87% | 67% | 18 |
-| rule (≤−127) | 3 | 3-0 | +3.65 | +121.7% | 100% | 45% | 10 |
-| model_ev | 0 | 0-0 | +0.00 | +0.0% | 0% | 0% | 4 |
+| all | 17 | 14-3 | +4.86 | +28.6% | 82% | 67% | 16 |
+| rule (≤−127) | 4 | 3-1 | +2.65 | +66.3% | 75% | 47% | 9 |
+| model_ev | 1 | 0-1 | -1.00 | -100.0% | 0% | 51% | 3 |
 
-## Graded (15)
+## Graded (17)
 
 | Kickoff | Match | Pick | DK | BE% | Model% | EV | Rule | Result | PnL |
 |---|---|---|--:|--:|--:|--:|:--:|:--:|--:|
@@ -29,13 +29,13 @@
 | Wed Jun 24th 6:00 PM | Morocco v Haiti | Morocco | -525 | 84 | 54 | -36% |  | ✅ | 0.190 |
 | Wed Jun 24th 9:00 PM | Czechia v Mexico | Mexico | -105 | 51 | 43 | -16% | ✓ | ✅ | 0.952 |
 | Wed Jun 24th 9:00 PM | South Africa v South Korea | South Korea | -160 | 62 | 39 | -37% |  | ❌ | -1 |
+| Thu Jun 25th 4:00 PM | Ecuador v Germany | Germany | -105 | 51 | 65 | +26% | ✓ | ❌ | -1 |
+| Thu Jun 25th 4:00 PM | Curacao v Ivory Coast | Ivory Coast | -650 | 87 | 54 | -38% |  | ✅ | 0.154 |
 
-## Pending (18)
+## Pending (16)
 
 | Kickoff | Match | Pick | DK | BE% | Model% | EV | Rule | Result | PnL |
 |---|---|---|--:|--:|--:|--:|:--:|:--:|--:|
-| Thu Jun 25th 4:00 PM | Ecuador v Germany | Germany | -105 | 51 | 65 | +26% | ✓ | · |  |
-| Thu Jun 25th 4:00 PM | Curacao v Ivory Coast | Ivory Coast | -650 | 87 | 54 | -38% |  | · |  |
 | Thu Jun 25th 7:00 PM | Tunisia v Netherlands | Netherlands | -750 | 88 | 68 | -23% |  | · |  |
 | Thu Jun 25th 7:00 PM | Japan v Sweden | Sweden | +320 | 24 | 39 | +62% | ✓ | · |  |
 | Thu Jun 25th 10:00 PM | Turkey v USA | USA | +100 | 50 | 45 | -10% | ✓ | · |  |

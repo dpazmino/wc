@@ -1,6 +1,6 @@
 # 2026 FIFA World Cup — Live Group-to-Bracket Projection
 
-*Generated 2026-06-16. Conditioned on the 53 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify); the 8 qualifying thirds are the highest-P(qualify) third-placed teams that fit FIFA's slot table. Knockout = official 2026 bracket, favourite advances. ✓ = projected to qualify.*
+*Generated 2026-06-16. Conditioned on the 55 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify); the 8 qualifying thirds are the highest-P(qualify) third-placed teams that fit FIFA's slot table. Knockout = official 2026 bracket, favourite advances. ✓ = projected to qualify.*
 
 ```mermaid
 flowchart LR
@@ -37,8 +37,8 @@ flowchart LR
     direction TB
     g_Germany["1. Germany ✓"]
     g_Ivory_Coast["2. Ivory Coast ✓"]
-    g_Curacao["3. Curacao"]
-    g_Ecuador["4. Ecuador"]
+    g_Ecuador["3. Ecuador ✓"]
+    g_Curacao["4. Curacao"]
   end
   subgraph GF["Group F"]
     direction TB
@@ -58,7 +58,7 @@ flowchart LR
     direction TB
     g_Spain["1. Spain ✓"]
     g_Cape_Verde["2. Cape Verde ✓"]
-    g_Uruguay["3. Uruguay ✓"]
+    g_Uruguay["3. Uruguay"]
     g_Saudi_Arabia["4. Saudi Arabia"]
   end
   subgraph GI["Group I"]
@@ -97,9 +97,9 @@ flowchart LR
     k1_Brazil["Brazil"]
     k1_France["France"]
     k1_Norway["Norway"]
-    k1_Sweden["Sweden"]
+    k1_Mexico["Mexico"]
     k1_England["England"]
-    k1_USA["USA"]
+    k1_Sweden["Sweden"]
     k1_Egypt["Egypt"]
     k1_Portugal["Portugal"]
     k1_Spain["Spain"]
@@ -115,7 +115,7 @@ flowchart LR
     k2_Brazil["Brazil"]
     k2_England["England"]
     k2_Portugal["Portugal"]
-    k2_USA["USA"]
+    k2_Sweden["Sweden"]
     k2_Argentina["Argentina"]
     k2_Switzerland["Switzerland"]
   end
@@ -137,21 +137,21 @@ flowchart LR
   g_South_Africa --> k1_Canada
   g_Canada --> k1_Canada
   g_Germany --> k1_Germany
-  g_Paraguay --> k1_Germany
+  g_Bosnia_and_Herzegovina --> k1_Germany
   g_Netherlands --> k1_Netherlands
   g_Morocco --> k1_Netherlands
   g_Brazil --> k1_Brazil
   g_Japan --> k1_Brazil
   g_France --> k1_France
-  g_Iran --> k1_France
+  g_Paraguay --> k1_France
   g_Ivory_Coast --> k1_Norway
   g_Norway --> k1_Norway
-  g_Mexico --> k1_Sweden
-  g_Sweden --> k1_Sweden
+  g_Mexico --> k1_Mexico
+  g_Ecuador --> k1_Mexico
   g_England --> k1_England
-  g_Uruguay --> k1_England
-  g_USA --> k1_USA
-  g_Bosnia_and_Herzegovina --> k1_USA
+  g_Algeria --> k1_England
+  g_USA --> k1_Sweden
+  g_Sweden --> k1_Sweden
   g_Egypt --> k1_Egypt
   g_South_Korea --> k1_Egypt
   g_Portugal --> k1_Portugal
@@ -159,7 +159,7 @@ flowchart LR
   g_Spain --> k1_Spain
   g_Austria --> k1_Spain
   g_Switzerland --> k1_Switzerland
-  g_Algeria --> k1_Switzerland
+  g_Iran --> k1_Switzerland
   g_Argentina --> k1_Argentina
   g_Cape_Verde --> k1_Argentina
   g_Colombia --> k1_Colombia
@@ -172,12 +172,12 @@ flowchart LR
   k1_Netherlands --> k2_Netherlands
   k1_Brazil --> k2_Brazil
   k1_Norway --> k2_Brazil
-  k1_Sweden --> k2_England
+  k1_Mexico --> k2_England
   k1_England --> k2_England
   k1_Portugal --> k2_Portugal
   k1_Spain --> k2_Portugal
-  k1_USA --> k2_USA
-  k1_Egypt --> k2_USA
+  k1_Sweden --> k2_Sweden
+  k1_Egypt --> k2_Sweden
   k1_Argentina --> k2_Argentina
   k1_Belgium --> k2_Argentina
   k1_Switzerland --> k2_Switzerland
@@ -185,7 +185,7 @@ flowchart LR
   k2_France --> k3_France
   k2_Netherlands --> k3_France
   k2_Portugal --> k3_Portugal
-  k2_USA --> k3_Portugal
+  k2_Sweden --> k3_Portugal
   k2_Brazil --> k3_England
   k2_England --> k3_England
   k2_Argentina --> k3_Argentina
@@ -201,8 +201,8 @@ flowchart LR
 
 **Projected champion: France.** Single most-likely path (favourite advances); exact probability is tiny — see the title-odds table for the real distribution.
 
-**Best-third cut (by P qualify):** in — Bosnia and Herzegovina 100%, South Korea 93%, Croatia 89%, Paraguay 81%, Algeria 76%, Iran 59%, Sweden 58%, Uruguay 54%.
-  Out — Senegal 48%, DR Congo 44%, Scotland 39%, Curacao 24%.
+**Best-third cut (by P qualify):** in — Bosnia and Herzegovina 100%, Ecuador 100%, South Korea 85%, Croatia 85%, Paraguay 78%, Algeria 70%, Iran 58%, Sweden 55%.
+  Out — Uruguay 53%, DR Congo 44%, Senegal 43%, Scotland 20%.
 
 ## Projected finish by team (most-likely bracket)
 
@@ -213,7 +213,7 @@ flowchart LR
 | **Winner** (1) | France |
 | **Runner-Up** (1) | England |
 | **Semi-Finals** (2) | Argentina, Portugal |
-| **Quarter-Finals** (4) | Brazil, Netherlands, Switzerland, USA |
-| **Last 16** (8) | Belgium, Canada, Colombia, Egypt, Germany, Norway, Spain, Sweden |
-| **Last 32** (16) | Algeria, Australia, Austria, Bosnia and Herzegovina, Cape Verde, Croatia, Ghana, Iran, Ivory Coast, Japan, Mexico, Morocco, Paraguay, South Africa, South Korea, Uruguay |
-| **Group Stage** (16) | Curacao, Czechia, DR Congo, Ecuador, Haiti, Iraq, Jordan, New Zealand, Panama, Qatar, Saudi Arabia, Scotland, Senegal, Tunisia, Turkey, Uzbekistan |
+| **Quarter-Finals** (4) | Brazil, Netherlands, Sweden, Switzerland |
+| **Last 16** (8) | Belgium, Canada, Colombia, Egypt, Germany, Mexico, Norway, Spain |
+| **Last 32** (16) | Algeria, Australia, Austria, Bosnia and Herzegovina, Cape Verde, Croatia, Ecuador, Ghana, Iran, Ivory Coast, Japan, Morocco, Paraguay, South Africa, South Korea, USA |
+| **Group Stage** (16) | Curacao, Czechia, DR Congo, Haiti, Iraq, Jordan, New Zealand, Panama, Qatar, Saudi Arabia, Scotland, Senegal, Tunisia, Turkey, Uruguay, Uzbekistan |

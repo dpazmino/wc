@@ -1,6 +1,6 @@
 # 2026 FIFA World Cup — Live Group-to-Bracket Projection
 
-*Generated 2026-06-16. Conditioned on the 55 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify); the 8 qualifying thirds are the highest-P(qualify) third-placed teams that fit FIFA's slot table. Knockout = official 2026 bracket, favourite advances. ✓ = projected to qualify.*
+*Generated 2026-06-16. Conditioned on the 59 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify); the 8 qualifying thirds are the highest-P(qualify) third-placed teams that fit FIFA's slot table. Knockout = official 2026 bracket, favourite advances. ✓ = projected to qualify.*
 
 ```mermaid
 flowchart LR
@@ -201,8 +201,8 @@ flowchart LR
 
 **Projected champion: France.** Single most-likely path (favourite advances); exact probability is tiny — see the title-odds table for the real distribution.
 
-**Best-third cut (by P qualify):** in — Bosnia and Herzegovina 100%, Ecuador 100%, South Korea 85%, Croatia 85%, Paraguay 78%, Algeria 70%, Iran 58%, Sweden 55%.
-  Out — Uruguay 53%, DR Congo 44%, Senegal 43%, Scotland 20%.
+**Best-third cut (by P qualify):** in — Bosnia and Herzegovina 100%, Ecuador 100%, Paraguay 100%, Croatia 83%, South Korea 76%, Algeria 70%, Sweden 61%, Iran 57%.
+  Out — Uruguay 52%, DR Congo 43%, Senegal 38%, Scotland 19%.
 
 ## Projected finish by team (most-likely bracket)
 

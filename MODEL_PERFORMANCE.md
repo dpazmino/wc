@@ -61,6 +61,44 @@ group stage's draw rate (16 of 59) is the ceiling on it (see §6).
 
 ---
 
+## 3a. Confusion matrix & F1 (the classifier view)
+
+Treating the model's most-likely pick as a 3-way classifier (`model_f1.py`, same leak-free
+walk-forward picks — reproduces the 37/59 above):
+
+```
+              PREDICTED
+ACTUAL      Home    Draw    Away    tot
+  Home        25       0       4     29
+  Draw        13       0       3     16
+  Away         2       0      12     14
+```
+
+| class | precision | recall | F1 | support |
+|---|--:|--:|--:|--:|
+| Home | 0.62 | 0.86 | 0.72 | 29 |
+| Draw | 0.00 | 0.00 | 0.00 | 16 |
+| Away | 0.63 | 0.86 | 0.73 | 14 |
+| **Macro-F1** | | | **0.484** | |
+| **Weighted-F1** | | | **0.529** | 59 |
+
+**Read it correctly — this is a *strong* winner-picker with one structural asterisk:**
+
+- **On games that had a winner it is excellent: 86% recall on both home and away wins**
+  (25/29 and 12/14). Counting only decisive games, the model went **37/43 = 86%** picking the
+  right side, and almost never confused a home win for an away win (6 such errors in 43).
+- **The Draw row is all zeros because the model never picks "Draw" as its single most-likely
+  outcome** — a favourite always edges it (~25–31% on the draw, never the most). So every actual
+  draw scores as a miss and Draw F1 = 0, dragging Macro-F1 to 0.48. **This is an argmax artifact,
+  not a ranking failure.** The model is a *probabilistic* forecaster; its honest measure is the
+  proper scoring in §2–3 (Brier/RPS beat baseline), not a hard-classification F1. It is the same
+  draw under-weighting documented in §6, viewed through a classifier lens.
+
+(Full 322-game history for context: Accuracy 50.9%, Macro-F1 0.33 — lower because it's dominated
+by tighter qualifiers with the same draw-zeroing; the 59-game WC set is the relevant current test.)
+
+---
+
 ## 4. The headline finding: the model is *under-confident*
 
 From `MODEL_CALIBRATION.md` (walk-forward reliability on the 55 games):
@@ -164,6 +202,7 @@ with its **pre-kickoff** price to prove we didn't pick this story after the fact
 - **Predictions & results:** `data/results.csv` (scores + de-vigged DK closing odds),
   `RESULTS_TRACKER.md`.
 - **Calibration:** `analyze_calibration.py` → `MODEL_CALIBRATION.md`.
+- **Confusion matrix & F1:** `model_f1.py` (§3a) — `python model_f1.py`.
 - **Forecasts over time:** git history (`docs/` committed at 31/43/47/53/55-result checkpoints).
 - **Betting:** `bet_tracker.py` + `data/bets.csv` + `BET_TRACKER.md`; `compare_odds.py` for
   model-vs-market.
@@ -183,4 +222,4 @@ against it: a 1-1 the favourite wins on penalties becomes a *hit*, not a miss. T
 prediction to test next.
 
 *Generated 2026-06-25. Regenerate the inputs (`analyze_calibration.py`, `bet_tracker.py`,
-`gen_live_forecast.py`) and this report stays current.*
+`gen_live_forecast.py`, `model_f1.py`) and this report stays current.*

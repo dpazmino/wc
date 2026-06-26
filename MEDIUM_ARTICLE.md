@@ -46,6 +46,16 @@ Before I let it touch a single 2026 game, I validated it on 294 historical fixtu
 
 The World Cup group stage is the first time the model has faced genuinely unseen games, in public, with no chance to fudge anything after the fact. Here's the live scorecard.
 
+| Metric (55 games, walk-forward) | Model | Naive baseline |
+|---|--:|--:|
+| Top-pick accuracy | **63%** (37/59) | — |
+| Accuracy on decisive games | **86%** (37/43) | — |
+| Brier score (lower is better) | **0.546** | 0.667 |
+| Log-loss | **0.93** | — |
+| Pre-tournament validation (294 games, RPS) | **0.205** | 0.231 |
+
+*Walk-forward means every prediction was made using only data available before that game — the model never saw its own result.*
+
 **It picks winners well.** Top-pick accuracy is **63% (37 of 59)**, and its Brier score (0.546) is comfortably ahead of the naive baseline (0.667). On games that actually had a winner, it's *excellent* — **86% recall** on both home and away wins. Counting only decisive games, it went **37 of 43**, and it almost never confused a home win for an away win. As a "which side wins" engine, it's genuinely strong.
 
 **It is, charmingly, too humble.** This is my favorite finding. When the model says its pick has, say, a 40–45% chance to win, those picks actually win **67%** of the time. Across the board, its favorites win about **10 percentage points more often than it claims.** The model systematically *undervalues its own picks.* It's a forecaster with impostor syndrome.
@@ -73,6 +83,14 @@ The edge I found was real — but it lived in the **"will this team advance" mar
 My disciplined betting filter — "only bet when the model's probability beats the price's break-even point," the rule an actual sharp bettor would use — is **0 for 3.** Every single time the model was confident enough to *disagree with the market on a specific game*, the market was right. Germany (a dead rubber the model badly misread), Sweden (drew), Paraguay (drew). Three swings, three misses.
 
 The only betting strategy that's in the black is "blindly back every model pick," and that's just a coarse ride on the under-confidence I mentioned earlier — and it's regressing toward break-even as I write this.
+
+| Betting strategy (every pick logged pre-kickoff) | Record | ROI |
+|---|:--:|--:|
+| Back every model pick | 15–6 | +9.5% |
+| Bet the "−127 or longer" rule | 3–4 | −5% |
+| Disciplined "value" filter (model prob > break-even) | **0–3** | **−100%** |
+
+*The one positive line is the undisciplined one. Every time the model was confident enough to disagree with the sharp price, it lost.*
 
 So the real, defensible conclusion is this: **a transparent strength model — even a well-calibrated one that beats a baseline and finds a structural market edge — does not have a game-level edge over a sharp betting market.** Where we disagreed on a single match, the book won. That's not the clickbait version. It's the true one, and I have the timestamped tickets to back it up.
 

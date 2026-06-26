@@ -36,7 +36,20 @@ Stripped down, it's three ideas stacked on top of each other:
 
 3. **Honest calibration.** I shrink the probabilities toward the base rate by a factor I tuned with cross-validation, then derive expected goals and scorelines from a simple Poisson model on the rating gap.
 
-That's it. No neural network. No 200-feature pipeline. A read on who's stronger, learning as the tournament goes.
+That's it. No neural network. No 200-feature pipeline. A read on who's stronger, learning as the tournament goes. The entire prediction is three lines:
+
+```python
+from match_engine.elo import default_model
+
+# Builds the ratings from ~250 historical results + every 2026 game so far.
+model = default_model()
+
+# Win / draw / loss for a single match — instant, no simulation, no API call.
+p_home, p_draw, p_away = model.strength_probs("Brazil", "France", neutral=True)
+#  →  (0.28, 0.35, 0.37)   a near-coin-flip the model is honest about
+```
+
+No Monte Carlo, no LLM, no per-game tuning — just a regularized Elo lookup. That speed is the whole point: I can forecast every remaining fixture, or roll the entire tournament forward 100,000 times for title odds, in seconds.
 
 Before I let it touch a single 2026 game, I validated it on 294 historical fixtures. The headline: it beat a naive baseline (RPS 0.205 vs 0.231), and — the part I actually cared about — the **cross-validated optimism was 0.001.** In plain English: the edge was real, not me fooling myself by overfitting. That number was my permission slip to take everything that followed seriously.
 

@@ -52,11 +52,12 @@ floor: the model was validated *before* a single 2026 game was scored.
 
 From `RESULTS_TRACKER.md` (walk-forward — the prediction never saw its own result):
 
-- **Top-pick accuracy: 36 / 55 = 65%**
-- **Brier (3-way): 0.540** vs **0.667** naive baseline
-- **Log-loss: 0.923**
+- **Top-pick accuracy: 37 / 59 = 63%**
+- **Brier (3-way): 0.546** vs **0.667** naive baseline
+- **Log-loss: 0.93**
 
-It has beaten the baseline every step of the tournament.
+It has beaten the baseline every step of the tournament — though the margin is modest, and the
+group stage's draw rate (16 of 59) is the ceiling on it (see §6).
 
 ---
 
@@ -67,17 +68,18 @@ From `MODEL_CALIBRATION.md` (walk-forward reliability on the 55 games):
 | Model said its pick would win… | It actually won | Gap |
 |---|--:|--:|
 | 40–45% | 67% | **+24 pts** |
-| 45–50% | 67% | +19 pts |
+| 45–50% | 55% | +7 pts |
 | 50–55% | 69% | +16 pts |
 | 55–60% | 67% | +9 pts |
-| 60–70% | 60% | −5 pts |
-| **Overall** | **65%** (claimed 53%) | **+12 pts** |
+| 60–70% | 64% | −1 pts |
+| **Overall** | **63%** (claimed 53%) | **+10 pts** |
 
-**The model's favourites win ~12 points more often than it claims.** That's the single most
+**The model's favourites win ~10 points more often than it claims.** That's the single most
 useful, quantified result of the project — and it's the *good* direction for a bettor: the
 model systematically **undervalues its own picks**, so a fairly-priced bet on them carries
-value. (ECE = 0.092, so it's not perfectly calibrated — the flip side is that it under-weights
-draws, see §6.)
+value. (ECE = 0.072, so it's not perfectly calibrated — the flip side is that it under-weights
+draws, see §6.) **But note the crucial distinction in §7:** this broad under-confidence is real,
+yet it did *not* translate into a moneyline edge over a sharp book.
 
 ---
 
@@ -102,6 +104,12 @@ those sides.
 The under-covered-African-side thesis went ~4-for-5. **Ghana — backed at the market's 54% and
 clinching by holding England — is the signature call.**
 
+**But be precise about *where* the edge lived.** It was in the **qualify / "to advance" market
+on under-covered teams** — a structural, season-long read the market shades on reputation. It
+was **not** a game-by-game moneyline edge. When the model disagreed with DraftKings on a single
+match strongly enough to flag a value bet, **the market won** (see §7). Those are two very
+different claims, and conflating them is exactly the overreach a credible write-up should avoid.
+
 ---
 
 ## 6. Where it failed (the honest part)
@@ -109,16 +117,17 @@ clinching by holding England — is the signature call.**
 A credible scorecard shows the misses:
 
 - **The draw blind spot.** The model assigns draws ~22% but the group stage ran ~25–30% draws.
-  14 of 55 games were draws; the model picked a side in nearly all of them, so most of its
+  16 of 59 games were draws; the model picked a side in nearly all of them, so most of its
   misses are "favourite controlled the game, drew anyway." This is the main thing inflating its
   Brier — and it's a *calibration* gap, not a ranking error (the favourite was usually the
   stronger side).
 - **Dead rubbers.** Germany, already qualified, rotated and lost 2-1 to a motivated Ecuador.
   The model rated Germany on its full squad and got it wrong — the market's lower number had
   correctly priced the rotation. **The model has no concept of "nothing to play for."**
-- **The disciplined bet lost first.** Our `model_ev` betting filter (only bet when model prob >
-  the price's break-even) is 0-1 — its lone bet was that dead-rubber Germany game. A real,
-  identifiable failure mode, not noise.
+- **The disciplined bet filter is winless.** Our `model_ev` filter (only bet when model prob >
+  the price's break-even) is **0-3** — Germany (dead rubber), Sweden (drew), Paraguay (drew).
+  Every game where the model was confident enough to *disagree* with the sharp line, the line
+  was right. That's the strongest evidence that the model has **no game-level betting edge.**
 - **It can't separate the title contenders.** Argentina / England / France / Germany have sat
   within ~0.5% of each other for a week; the "leader" rotates on Monte-Carlo noise. The model
   is honest that the top of the field is a coin-flip — which is correct, but not a bold call.
@@ -132,13 +141,21 @@ finish. Three strategies (flat 1-unit, draw = loss):
 
 | Strategy | Record | Net | ROI |
 |---|:--:|--:|--:|
-| All model picks | 14-3 | +4.86u | +29% |
-| User's "−127 rule" | 3-1 | +2.65u | +66% |
-| Disciplined "model_ev" | 0-1 | −1.00u | −100% |
+| All model picks | 15-6 | +2.00u | +9.5% |
+| User's "−127 rule" | 3-4 | −0.35u | **−5%** |
+| Disciplined "model_ev" | 0-3 | −3.00u | **−100%** |
 
-**Caveat we keep front and centre:** these are tiny samples (1–17 bets). The +29% ROI is
-riding the model's strong group-stage favourites and *will* regress. The point of the ledger is
-an honest forward test, not a victory lap — the real verdict needs ~30+ graded bets.
+**This is the most important honest result in the whole project — and it's the opposite of the
+clickbait version.** Early on, all three strategies looked great (the "all" ledger was +29%,
+the "rule" 3-0). But within a week the two *edge* strategies (`rule`, `model_ev`)
+went underwater. `model_ev` — the **disciplined** one, the one a sharp bettor would actually
+use — is **0-for-3.** The only positive line, "all picks," is a coarse ride on the model's
+under-confidence (§4) and is itself regressing toward break-even.
+
+**The takeaway:** *a transparent strength model, even a well-calibrated one that beats a
+baseline, does not have a game-level edge over a sharp betting market.* Where they disagreed,
+the market was right. That's the real, defensible conclusion — and we have every pick logged
+with its **pre-kickoff** price to prove we didn't pick this story after the fact.
 
 ---
 

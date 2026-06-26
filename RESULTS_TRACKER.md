@@ -61,11 +61,15 @@ Brier = squared error for that game (lower is better; a blind 1/3-1/3-1/3 guess 
 | South Africa vs South Korea | 33/28/39 | South Korea | 1-0 (South Africa) | ❌ | 0.68 |
 | Curaçao vs Ivory Coast | 24/22/54 | Ivory Coast | 0-2 (Ivory Coast) | ✅ | 0.32 |
 | Ecuador vs Germany | 18/17/65 | Germany | 2-1 (Ecuador) | ❌ | 1.12 |
+| Tunisia vs Netherlands | 16/16/68 | Netherlands | 1-3 (Netherlands) | ✅ | 0.15 |
+| Japan vs Sweden | 34/28/39 | Sweden | 1-1 (Draw) | ❌ | 0.79 |
+| Türkiye vs USA (H) | 30/25/45 | USA | 3-2 (Türkiye) | ❌ | 0.76 |
+| Paraguay vs Australia | 45/26/29 | Paraguay | 0-0 (Draw) | ❌ | 0.83 |
 
-## Scoreboard (55 games)
-- **Top-pick accuracy: 36 / 55** (Mexico, USA, Scotland, Germany, Ivory Coast, France, Norway, Argentina, Austria, England, Ghana, Colombia, Switzerland, Canada, Morocco, Brazil, Netherlands, Japan, Spain, Egypt, Algeria, Portugal, Croatia, Bosnia)
-- **Avg Brier (model): 0.534**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
-- **Draws: 14 / 55** · **Outright upsets against the model: 4 / 55** (South Korea, Australia, Paraguay, Ecuador)
+## Scoreboard (59 games)
+- **Top-pick accuracy: 37 / 59** (Mexico, USA, Scotland, Germany, Ivory Coast, France, Norway, Argentina, Austria, England, Ghana, Colombia, Switzerland, Canada, Morocco, Brazil, Netherlands, Japan, Spain, Egypt, Algeria, Portugal, Croatia, Bosnia)
+- **Avg Brier (model): 0.541**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
+- **Draws: 16 / 59** · **Outright upsets against the model: 5 / 59** (South Korea, Australia, Paraguay, Ecuador, Türkiye)
 
 ## Honest read
 The June 16 slate (France, Norway, Argentina all winning as favourites, slate Brier 0.27)
@@ -95,4 +99,4 @@ June 17 split (Austria win, Portugal 1-1 DR Congo) held it there.
 - **Fade vindicated:** Colombia 1-3'd Uzbekistan as DK's −250 implied (71%) — the model's
   diffuse 51% was the worse number, exactly why I flagged Uzbekistan-to-advance as a fade, not edge.
 
-*Updated through the June 24 final Group A/B/C matchday (Switzerland–Canada … South Africa–South Korea).*
+*Updated through the June 25 final Group D/E/F matchday (Curaçao–Ivory Coast … Paraguay–Australia).*

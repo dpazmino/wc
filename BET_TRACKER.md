@@ -1,6 +1,6 @@
 # Prospective Bet Tracker — model picks vs DraftKings
 
-*Updated 2026-06-27. Flat 1-unit stakes; draw = loss (3-way moneyline). Picks + prices locked before kickoff. Three strategies: **all** picks · **rule** (DK price −127 or longer, BE ≤ 56%) · **model_ev** (model prob > break-even). PnL in units.*
+*Updated 2026-06-27. Flat 1-unit stakes; draw = loss (3-way moneyline). Picks + prices locked before kickoff. Four strategies: **all** picks · **rule** (DK price −127 or longer, BE ≤ 56%) · **model_ev** (model prob > break-even) · **turtle** (plus-money pick on a covered squad — asymmetric payoff). PnL in units.*
 
 ## Running record
 
@@ -9,6 +9,7 @@
 | all | 27 | 19-8 | +1.83 | +6.8% | 70% | 63% | 6 |
 | rule (≤−127) | 10 | 4-6 | -1.55 | -15.5% | 40% | 44% | 3 |
 | model_ev | 3 | 0-3 | -3.00 | -100.0% | 0% | 37% | 1 |
+| turtle (plus-$) | 7 | 2-5 | -2.30 | -32.9% | 29% | 40% | 3 |
 
 ## By model confidence tier (graded bets)
 

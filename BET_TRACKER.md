@@ -1,16 +1,16 @@
 # Prospective Bet Tracker — model picks vs DraftKings
 
-*Updated 2026-06-26. Flat 1-unit stakes; draw = loss (3-way moneyline). Picks + prices locked before kickoff. Three strategies: **all** picks · **rule** (DK price −127 or longer, BE ≤ 56%) · **model_ev** (model prob > break-even). PnL in units.*
+*Updated 2026-06-27. Flat 1-unit stakes; draw = loss (3-way moneyline). Picks + prices locked before kickoff. Three strategies: **all** picks · **rule** (DK price −127 or longer, BE ≤ 56%) · **model_ev** (model prob > break-even). PnL in units.*
 
 ## Running record
 
 | Strategy | Bets | Record | Net (u) | ROI | Win% | Avg BE% | Pending |
 |---|--:|:--:|--:|--:|--:|--:|--:|
-| all | 21 | 15-6 | +2.00 | +9.5% | 71% | 64% | 12 |
-| rule (≤−127) | 7 | 3-4 | -0.35 | -5.0% | 43% | 42% | 6 |
+| all | 27 | 19-8 | +1.83 | +6.8% | 70% | 63% | 6 |
+| rule (≤−127) | 10 | 4-6 | -1.55 | -15.5% | 40% | 44% | 3 |
 | model_ev | 3 | 0-3 | -3.00 | -100.0% | 0% | 37% | 1 |
 
-## Graded (21)
+## Graded (27)
 
 | Kickoff | Match | Pick | DK | BE% | Model% | EV | Rule | Result | PnL |
 |---|---|---|--:|--:|--:|--:|:--:|:--:|--:|
@@ -35,17 +35,17 @@
 | Thu Jun 25th 7:00 PM | Japan v Sweden | Sweden | +320 | 24 | 39 | +62% | ✓ | ❌ | -1 |
 | Thu Jun 25th 10:00 PM | Turkey v USA | USA | +100 | 50 | 45 | -10% | ✓ | ❌ | -1 |
 | Thu Jun 25th 10:00 PM | Paraguay v Australia | Paraguay | +190 | 34 | 45 | +31% | ✓ | ❌ | -1 |
+| Fri Jun 26th 3:00 PM | Norway v France | France | -125 | 56 | 53 | -5% | ✓ | ✅ | 0.800 |
+| Fri Jun 26th 3:00 PM | Senegal v Iraq | Senegal | -330 | 77 | 53 | -31% |  | ✅ | 0.303 |
+| Fri Jun 26th 8:00 PM | Uruguay v Spain | Spain | -195 | 66 | 46 | -30% |  | ✅ | 0.513 |
+| Fri Jun 26th 8:00 PM | Cape Verde v Saudi Arabia | Cape Verde | +130 | 43 | 38 | -12% | ✓ | ❌ | -1 |
+| Fri Jun 26th 11:00 PM | New Zealand v Belgium | Belgium | -450 | 82 | 69 | -16% |  | ✅ | 0.222 |
+| Fri Jun 26th 11:00 PM | Egypt v Iran | Egypt | +125 | 44 | 41 | -7% | ✓ | ❌ | -1 |
 
-## Pending (12)
+## Pending (6)
 
 | Kickoff | Match | Pick | DK | BE% | Model% | EV | Rule | Result | PnL |
 |---|---|---|--:|--:|--:|--:|:--:|:--:|--:|
-| Fri Jun 26th 3:00 PM | Norway v France | France | -125 | 56 | 53 | -5% | ✓ | · |  |
-| Fri Jun 26th 3:00 PM | Senegal v Iraq | Senegal | -330 | 77 | 53 | -31% |  | · |  |
-| Fri Jun 26th 8:00 PM | Uruguay v Spain | Spain | -195 | 66 | 46 | -30% |  | · |  |
-| Fri Jun 26th 8:00 PM | Cape Verde v Saudi Arabia | Cape Verde | +130 | 43 | 38 | -12% | ✓ | · |  |
-| Fri Jun 26th 11:00 PM | New Zealand v Belgium | Belgium | -450 | 82 | 69 | -16% |  | · |  |
-| Fri Jun 26th 11:00 PM | Egypt v Iran | Egypt | +125 | 44 | 41 | -7% | ✓ | · |  |
 | Sat Jun 27th 5:00 PM | Panama v England | England | -425 | 81 | 74 | -9% |  | · |  |
 | Sat Jun 27th 5:00 PM | Croatia v Ghana | Croatia | -160 | 62 | 40 | -35% |  | · |  |
 | Sat Jun 27th 7:30 PM | Colombia v Portugal | Portugal | +105 | 49 | 49 | -0% | ✓ | · |  |

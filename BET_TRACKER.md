@@ -10,6 +10,17 @@
 | rule (≤−127) | 10 | 4-6 | -1.55 | -15.5% | 40% | 44% | 3 |
 | model_ev | 3 | 0-3 | -3.00 | -100.0% | 0% | 37% | 1 |
 
+## By model confidence tier (graded bets)
+
+*Every graded bet bucketed by the model's **locked pre-kickoff** win prob on its pick (no recompute = no leakage). Backing the favourite flat, draw = loss. The question: does higher model confidence convert to profit, or just to a higher hit rate at shorter prices?*
+
+| Tier | Fav prob | Bets | W-L | Win% | Net (u) | ROI |
+|---|---|--:|:--:|--:|--:|--:|
+| Coin flip | <40% | 3 | 0-3 | 0% | -3.00 | -100.0% |
+| Slight lean | 40–50% | 9 | 6-3 | 67% | +2.11 | +23.5% |
+| Favoured | 50–62% | 9 | 8-1 | 89% | +2.54 | +28.3% |
+| Clear favourite | 62–74% | 6 | 5-1 | 83% | +0.18 | +3.0% |
+
 ## Graded (27)
 
 | Kickoff | Match | Pick | DK | BE% | Model% | EV | Rule | Result | PnL |

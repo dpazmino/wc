@@ -1,7 +1,7 @@
 # Predicting the 2026 World Cup — Model Performance Report
 
 *A running, honest scorecard of a transparent strength model's predictions across the 2026
-World Cup. Updated through 2026-06-25 (55 group-stage games). This is the evidence base — wins
+World Cup. Updated through 2026-06-26 (65 group-stage games). This is the evidence base — wins
 **and** misses — behind the write-up. Every number here is reproducible from the scripts and
 `data/results.csv` in this repo.*
 
@@ -35,87 +35,88 @@ The story is the *rigor and the edge*, not omniscience.
 
 ## 2. Out-of-sample validation (before the tournament)
 
-On 294 historical fixtures, walk-forward (each game scored with ratings known only *before*
+On 328 fixtures, walk-forward (each game scored with ratings known only *before*
 it), via `backtest.py --cv`:
 
 | Model | RPS ↓ | Brier ↓ | beats base rate? |
 |---|--:|--:|:--:|
-| Base-rate prior | 0.231 | 0.662 | — |
-| **Production (`pred`)** | **0.205** | **0.608** | ✅ |
+| Base-rate prior | 0.232 | 0.661 | — |
+| **Production (`pred`)** | **0.201** | **0.598** | ✅ |
 
-**Cross-validated optimism: 0.001** — the edge is real, not overfit. This is the credibility
-floor: the model was validated *before* a single 2026 game was scored.
+**Cross-validated optimism: 0.000** — the edge is real, not overfit. This is the credibility
+floor: the model beat the baseline out-of-sample *before* the tournament, and still does as
+2026 results accumulate.
 
 ---
 
-## 3. In-tournament accuracy (55 games)
+## 3. In-tournament accuracy (65 games)
 
 From `RESULTS_TRACKER.md` (walk-forward — the prediction never saw its own result):
 
-- **Top-pick accuracy: 37 / 59 = 63%**
-- **Brier (3-way): 0.546** vs **0.667** naive baseline
-- **Log-loss: 0.93**
+- **Top-pick accuracy: 41 / 65 = 63%**
+- **Brier (3-way): 0.539** vs **0.667** naive baseline
+- **Log-loss: 0.92**
 
 It has beaten the baseline every step of the tournament — though the margin is modest, and the
-group stage's draw rate (16 of 59) is the ceiling on it (see §6).
+group stage's draw rate (18 of 65) is the ceiling on it (see §6).
 
 ---
 
 ## 3a. Confusion matrix & F1 (the classifier view)
 
 Treating the model's most-likely pick as a 3-way classifier (`model_f1.py`, same leak-free
-walk-forward picks — reproduces the 37/59 above):
+walk-forward picks — reproduces the 41/65 above):
 
 ```
               PREDICTED
 ACTUAL      Home    Draw    Away    tot
-  Home        25       0       4     29
-  Draw        13       0       3     16
-  Away         2       0      12     14
+  Home        26       0       4     30
+  Draw        15       0       3     18
+  Away         2       0      15     17
 ```
 
 | class | precision | recall | F1 | support |
 |---|--:|--:|--:|--:|
-| Home | 0.62 | 0.86 | 0.72 | 29 |
-| Draw | 0.00 | 0.00 | 0.00 | 16 |
-| Away | 0.63 | 0.86 | 0.73 | 14 |
-| **Macro-F1** | | | **0.484** | |
-| **Weighted-F1** | | | **0.529** | 59 |
+| Home | 0.60 | 0.87 | 0.71 | 30 |
+| Draw | 0.00 | 0.00 | 0.00 | 18 |
+| Away | 0.68 | 0.88 | 0.77 | 17 |
+| **Macro-F1** | | | **0.494** | |
+| **Weighted-F1** | | | **0.530** | 65 |
 
 **Read it correctly — this is a *strong* winner-picker with one structural asterisk:**
 
-- **On games that had a winner it is excellent: 86% recall on both home and away wins**
-  (25/29 and 12/14). Counting only decisive games, the model went **37/43 = 86%** picking the
-  right side, and almost never confused a home win for an away win (6 such errors in 43).
+- **On games that had a winner it is excellent: ~87% recall on both home and away wins**
+  (26/30 and 15/17). Counting only decisive games, the model went **41/47 = 87%** picking the
+  right side, and almost never confused a home win for an away win (6 such errors in 47).
 - **The Draw row is all zeros because the model never picks "Draw" as its single most-likely
   outcome** — a favourite always edges it (~25–31% on the draw, never the most). So every actual
-  draw scores as a miss and Draw F1 = 0, dragging Macro-F1 to 0.48. **This is an argmax artifact,
+  draw scores as a miss and Draw F1 = 0, dragging Macro-F1 to 0.49. **This is an argmax artifact,
   not a ranking failure.** The model is a *probabilistic* forecaster; its honest measure is the
   proper scoring in §2–3 (Brier/RPS beat baseline), not a hard-classification F1. It is the same
   draw under-weighting documented in §6, viewed through a classifier lens.
 
-(Full 322-game history for context: Accuracy 50.9%, Macro-F1 0.33 — lower because it's dominated
-by tighter qualifiers with the same draw-zeroing; the 59-game WC set is the relevant current test.)
+(Full 328-game history for context: Accuracy 51.2%, Macro-F1 0.34 — lower because it's dominated
+by tighter qualifiers with the same draw-zeroing; the 65-game WC set is the relevant current test.)
 
 ---
 
 ## 4. The headline finding: the model is *under-confident*
 
-From `MODEL_CALIBRATION.md` (walk-forward reliability on the 55 games):
+From `MODEL_CALIBRATION.md` (walk-forward reliability on the 65 games):
 
 | Model said its pick would win… | It actually won | Gap |
 |---|--:|--:|
-| 40–45% | 67% | **+24 pts** |
-| 45–50% | 55% | +7 pts |
-| 50–55% | 69% | +16 pts |
+| 40–45% | 60% | **+18 pts** |
+| 45–50% | 58% | +11 pts |
+| 50–55% | 73% | +20 pts |
 | 55–60% | 67% | +9 pts |
-| 60–70% | 64% | −1 pts |
-| **Overall** | **63%** (claimed 53%) | **+10 pts** |
+| 60–70% | 67% | +1 pts |
+| **Overall** | **63%** (claimed 53%) | **+11 pts** |
 
-**The model's favourites win ~10 points more often than it claims.** That's the single most
+**The model's favourites win ~11 points more often than it claims.** That's the single most
 useful, quantified result of the project — and it's the *good* direction for a bettor: the
 model systematically **undervalues its own picks**, so a fairly-priced bet on them carries
-value. (ECE = 0.072, so it's not perfectly calibrated — the flip side is that it under-weights
+value. (ECE = 0.076, so it's not perfectly calibrated — the flip side is that it under-weights
 draws, see §6.) **But note the crucial distinction in §7:** this broad under-confidence is real,
 yet it did *not* translate into a moneyline edge over a sharp book.
 
@@ -154,8 +155,8 @@ different claims, and conflating them is exactly the overreach a credible write-
 
 A credible scorecard shows the misses:
 
-- **The draw blind spot.** The model assigns draws ~22% but the group stage ran ~25–30% draws.
-  16 of 59 games were draws; the model picked a side in nearly all of them, so most of its
+- **The draw blind spot.** The model assigns draws ~22% but the group stage ran ~28% draws.
+  18 of 65 games were draws; the model picked a side in nearly all of them, so most of its
   misses are "favourite controlled the game, drew anyway." This is the main thing inflating its
   Brier — and it's a *calibration* gap, not a ranking error (the favourite was usually the
   stronger side).
@@ -179,16 +180,17 @@ finish. Three strategies (flat 1-unit, draw = loss):
 
 | Strategy | Record | Net | ROI |
 |---|:--:|--:|--:|
-| All model picks | 15-6 | +2.00u | +9.5% |
-| User's "−127 rule" | 3-4 | −0.35u | **−5%** |
+| All model picks | 19-8 | +1.83u | +6.8% |
+| User's "−127 rule" | 4-6 | −1.55u | **−15.5%** |
 | Disciplined "model_ev" | 0-3 | −3.00u | **−100%** |
 
 **This is the most important honest result in the whole project — and it's the opposite of the
 clickbait version.** Early on, all three strategies looked great (the "all" ledger was +29%,
-the "rule" 3-0). But within a week the two *edge* strategies (`rule`, `model_ev`)
-went underwater. `model_ev` — the **disciplined** one, the one a sharp bettor would actually
-use — is **0-for-3.** The only positive line, "all picks," is a coarse ride on the model's
-under-confidence (§4) and is itself regressing toward break-even.
+the "rule" 3-0). But as the sample grew the two *edge* strategies (`rule`, `model_ev`)
+went underwater — `rule` is now **4-6 (−15.5%)** and `model_ev` — the **disciplined** one, the
+one a sharp bettor would actually use — is **0-for-3.** The only positive line, "all picks," is a
+coarse ride on the model's under-confidence (§4) and has itself regressed from +29% to **+6.8%**
+as the games piled up.
 
 **The takeaway:** *a transparent strength model, even a well-calibrated one that beats a
 baseline, does not have a game-level edge over a sharp betting market.* Where they disagreed,
@@ -203,7 +205,7 @@ with its **pre-kickoff** price to prove we didn't pick this story after the fact
   `RESULTS_TRACKER.md`.
 - **Calibration:** `analyze_calibration.py` → `MODEL_CALIBRATION.md`.
 - **Confusion matrix & F1:** `model_f1.py` (§3a) — `python model_f1.py`.
-- **Forecasts over time:** git history (`docs/` committed at 31/43/47/53/55-result checkpoints).
+- **Forecasts over time:** git history (`docs/` committed at 31/43/47/53/55/65-result checkpoints).
 - **Betting:** `bet_tracker.py` + `data/bets.csv` + `BET_TRACKER.md`; `compare_odds.py` for
   model-vs-market.
 - **Model & validation:** `predict.py`, `match_engine/elo.py`, `backtest.py --cv`.
@@ -221,5 +223,5 @@ report `P(advance) = P(win) + ½·P(draw)`, grade on advancement, and score with
 against it: a 1-1 the favourite wins on penalties becomes a *hit*, not a miss. That's the
 prediction to test next.
 
-*Generated 2026-06-25. Regenerate the inputs (`analyze_calibration.py`, `bet_tracker.py`,
+*Generated 2026-06-27. Regenerate the inputs (`analyze_calibration.py`, `bet_tracker.py`,
 `gen_live_forecast.py`, `model_f1.py`) and this report stays current.*

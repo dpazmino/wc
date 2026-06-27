@@ -65,38 +65,44 @@ Brier = squared error for that game (lower is better; a blind 1/3-1/3-1/3 guess 
 | Japan vs Sweden | 34/28/39 | Sweden | 1-1 (Draw) | ❌ | 0.79 |
 | Türkiye vs USA (H) | 30/25/45 | USA | 3-2 (Türkiye) | ❌ | 0.76 |
 | Paraguay vs Australia | 45/26/29 | Paraguay | 0-0 (Draw) | ❌ | 0.83 |
+| Norway vs France | 25/23/53 | France | 1-4 (France) | ✅ | 0.34 |
+| Senegal vs Iraq | 53/23/25 | Senegal | 5-0 (Senegal) | ✅ | 0.34 |
+| Cape Verde vs Saudi Arabia | 38/28/33 | Cape Verde | 0-0 (Draw) | ❌ | 0.78 |
+| Uruguay vs Spain | 28/25/47 | Spain | 0-1 (Spain) | ✅ | 0.42 |
+| Egypt vs Iran | 42/28/31 | Egypt | 1-1 (Draw) | ❌ | 0.79 |
+| New Zealand vs Belgium | 14/17/69 | Belgium | 1-5 (Belgium) | ✅ | 0.14 |
 
-## Scoreboard (59 games)
-- **Top-pick accuracy: 37 / 59** (Mexico, USA, Scotland, Germany, Ivory Coast, France, Norway, Argentina, Austria, England, Ghana, Colombia, Switzerland, Canada, Morocco, Brazil, Netherlands, Japan, Spain, Egypt, Algeria, Portugal, Croatia, Bosnia)
-- **Avg Brier (model): 0.541**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
-- **Draws: 16 / 59** · **Outright upsets against the model: 5 / 59** (South Korea, Australia, Paraguay, Ecuador, Türkiye)
+## Scoreboard (65 games)
+- **Top-pick accuracy: 41 / 65 = 63%** (added France, Senegal, Spain, Belgium on the June 26 slate)
+- **Avg Brier (model): 0.539**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
+- **Draws: 18 / 65** (28%) · **Outright upsets against the model: 6 / 65** (South Korea, Australia, Paraguay, South Africa, Ecuador, Türkiye)
 
 ## Honest read
-The June 16 slate (France, Norway, Argentina all winning as favourites, slate Brier 0.27)
-pulled the average from 0.717 back to **0.644 — below the blind 1/3 guess again**, and the
-June 17 split (Austria win, Portugal 1-1 DR Congo) held it there.
+With nearly the whole group stage logged (65 games), the picture has stabilised: the model is a
+**strong winner-picker that bleeds on draws.**
 
-- **Draws were the whole story, and the group-opener wave has passed.** 9 of 20 games were
-  draws (45%, down from the early 53%), heavily clustered in the tight opening round; once
-  second games arrived, the favourites started converting (3-1, 4-1, 3-0, 3-1). The model
-  assigns draws only ~18–25%, so it lost nine coin-flips it was favoured in during the opener
-  glut — a conversion-variance miss, not a ranking error — and is now being rewarded as games
-  open up.
-- **Group-opener effect.** Opening games are historically tight and low-scoring; the model has
-  no tournament-phase adjustment, so it over-converts strength into expected wins right now.
-- **Germany 7-1 Curaçao** (Brier 0.16), **Norway 4-1 Iraq** (0.25), and the **Ivory Coast–
-  Ecuador** market beat remain the best calls.
+- **On decisive games it's excellent.** Counting only games that had a winner, the model picked
+  the right side ~87% of the time and almost never confused a home win for an away win. The June
+  26 slate was textbook: France, Senegal, Spain and Belgium all delivered as favourites (Briers
+  0.34/0.34/0.42/0.14).
+- **Draws are the whole miss.** 18 of 65 games (28%) were draws, and the model picks a side in
+  almost all of them — so most of its 24 misses are "favourite controlled it, drew anyway." It
+  models draws at only ~22%, a calibration gap, not a ranking error.
+- **Best calls:** **Germany 7-1 Curaçao** (Brier 0.16), **New Zealand 1-5 Belgium** (0.14),
+  **France 3-0 Iraq** (0.14), and the **Ivory Coast–Ecuador** pre-tournament market beat.
+- **The 6 outright upsets** (South Korea, Australia, Paraguay, South Africa, Ecuador, Türkiye)
+  include the textbook dead-rubber miss: an already-qualified **Germany rotated and lost 2-1 to
+  Ecuador** — the model has no "nothing to play for" concept.
 
 ## Caveats
-- 23 games is still a small sample; the real measure is the 278-fixture backtest (CV RPS 0.210 vs 0.231).
-- The draw lean (9/23 = 39%, vs ~22% modelled) was concentrated in the group openers and has
-  eased as second games arrived — worth a **DRAW_BASE / draw-mass** look once the group stage
-  ends, **not** a strength-rating change. The 278-fixture CV is unmoved, so don't retune off this.
-- Pending (predicted, not yet reported): **Sweden vs Tunisia** (Group F).
-- **Thesis watch:** both elimination-market bets advancing — **Ghana beat Panama 1-0** (3 pts, the
-  qualify thesis on track) and **DR Congo's 1-1 with Portugal** banked a point. Both feed the
-  "to qualify" tests in [[model-vs-draftkings-tracker]].
-- **Fade vindicated:** Colombia 1-3'd Uzbekistan as DK's −250 implied (71%) — the model's
-  diffuse 51% was the worse number, exactly why I flagged Uzbekistan-to-advance as a fade, not edge.
+- 65 games is now a meaningful sample, but the rigorous measure is still the 328-fixture
+  walk-forward backtest (**CV RPS 0.200 vs 0.232 baseline; optimism ~0.000** — the edge is real).
+- The draw lean (28% actual vs ~22% modelled) persists across the full group stage — worth a
+  **DRAW_BASE / draw-mass** look now that the group stage is nearly done, **not** a strength-rating
+  change. The CV is unmoved, so don't retune strength off this.
+- **Thesis watch:** the under-covered-African-side qualify bets largely landed (Ghana, Ivory
+  Coast, Algeria advancing) — see [[model-vs-draftkings-tracker]]. But the *game-level* edge
+  hasn't materialised: where the model disagreed with the sharp line, the line won (see BET_TRACKER).
 
-*Updated through the June 25 final Group D/E/F matchday (Curaçao–Ivory Coast … Paraguay–Australia).*
+*Updated through the June 26 Group G/H/I final matchday (Norway–France … New Zealand–Belgium).
+The June 27 closing fixtures (Panama–England, Croatia–Ghana, Jordan–Argentina …) are not yet played.*

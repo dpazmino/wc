@@ -54,4 +54,4 @@
 - Model **65.2 / 18.0 / 16.7** (W/D/L) · xG 1.86–0.74.
 - **To advance:** Argentina 74% · Cape Verde 26% → **Argentina**.
 
-*Pure-model slate (no DraftKings anchoring). Regenerate: `python gen_r32_preds.py`. Log results to `data/results.csv` after kickoff (knockout: log the score for Elo, track the advancer separately).*
+*Pure-model slate (no DraftKings anchoring). Regenerate: `python gen_ko_preds.py r32`. Log results to `data/results.csv` after kickoff (knockout: log the score for Elo, track the advancer separately).*

@@ -1,13 +1,13 @@
 # Model Calibration — 2026 World Cup (walk-forward)
 
-*Generated 2026-06-27. 65 tournament games, each predicted with ratings as of its own date (no leakage). Calibration asks: when the model said X%, did it happen X%? Brier/log-loss are 3-way (lower better); ECE = expected calibration error (0 = perfect).*
+*Generated 2026-06-29. 73 tournament games, each predicted with ratings as of its own date (no leakage). Calibration asks: when the model said X%, did it happen X%? Brier/log-loss are 3-way (lower better); ECE = expected calibration error (0 = perfect).*
 
 ## Headline
 
-- **Top-pick accuracy:** 41/65 = **63%**
-- **Brier (3-way):** 0.539  (naive 1/3 baseline = 0.667)
-- **Log-loss:** 0.922
-- **ECE:** 0.076  (some miscalibration)
+- **Top-pick accuracy:** 47/73 = **64%**
+- **Brier (3-way):** 0.530  (naive 1/3 baseline = 0.667)
+- **Log-loss:** 0.910
+- **ECE:** 0.083  (some miscalibration)
 
 ## Reliability curve (all outcomes)
 
@@ -15,12 +15,13 @@
 
 | Prob band | n | Mean pred | Actual | Bar (pred=│ actual=█) |
 |---|--:|--:|--:|---|
-| 10–20% | 24 | 17% | 17% | `███│················` |
-| 20–30% | 92 | 24% | 20% | `████·│··············` |
-| 30–40% | 18 | 33% | 17% | `███····│············` |
-| 40–50% | 22 | 45% | 59% | `█████████│██········` |
-| 50–60% | 27 | 55% | 70% | `███████████│██······` |
-| 60–70% | 12 | 65% | 67% | `█████████████│······` |
+| 10–20% | 28 | 17% | 14% | `███│················` |
+| 20–30% | 101 | 24% | 20% | `████·│··············` |
+| 30–40% | 23 | 33% | 17% | `███····│············` |
+| 40–50% | 25 | 45% | 60% | `█████████│██········` |
+| 50–60% | 28 | 55% | 71% | `███████████│██······` |
+| 60–70% | 13 | 66% | 69% | `█████████████│······` |
+| 70–80% | 1 | 74% | 100% | `███████████████│████` |
 
 ## Favourite-confidence view (the betting-relevant one)
 
@@ -28,14 +29,15 @@
 
 | Model said | Games | Won | vs claimed |
 |---|--:|--:|---|
-| 40–45% | 10 | 60% | +18 pts |
-| 45–50% | 12 | 58% | +11 pts |
-| 50–55% | 15 | 73% | +20 pts |
+| 40–45% | 11 | 64% | +21 pts |
+| 45–50% | 14 | 57% | +10 pts |
+| 50–55% | 16 | 75% | +22 pts |
 | 55–60% | 12 | 67% | +9 pts |
-| 60–70% | 12 | 67% | +1 pts |
+| 60–70% | 13 | 69% | +4 pts |
+| 70–101% | 1 | 100% | +26 pts |
 
 ## Read
-- The model's picks won **63%** overall while claiming **53%** on average — a **+11 pt** gap, i.e. the model is **under-confident** in its favourites.
+- The model's picks won **64%** overall while claiming **52%** on average — a **+12 pt** gap, i.e. the model is **under-confident** in its favourites.
 - Under-confidence is the *good* direction for betting: the model's favourites win more than its numbers say, so a fair-priced bet on them carries value.
 - Caveat: 55 games is a small sample and these are all **group-stage** games, where the draw blind spot inflates Brier; knockout (binary advance) calibration will be measured separately.
 

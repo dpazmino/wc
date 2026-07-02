@@ -1,6 +1,6 @@
 # 2026 FIFA World Cup — Live Group-to-Bracket Projection
 
-*Generated 2026-07-01. Conditioned on the 75 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify). Knockout ties are seated from real R32 fixtures (played ties locked to their actual result); the official 2026 bracket then advances the favourite for unplayed games. ✓ = projected to qualify.*
+*Generated 2026-07-02. Conditioned on the 81 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify). Knockout ties are seated from real R32 fixtures (played ties locked to their actual result); the official 2026 bracket then advances the favourite for unplayed games. ✓ = projected to qualify.*
 
 ```mermaid
 flowchart LR

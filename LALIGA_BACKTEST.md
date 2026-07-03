@@ -43,6 +43,35 @@ the closing line when it has hundreds of games per team to learn from?**
    central null survives — but the gap is small and the model is genuinely
    competitive (DC closes ~⅓ of the prior→market distance beyond Elo).
 
+## Phase 2 — squad seed + beat-the-close screen
+
+**Squad-strength cold-start seed.** Replacing the flat prior (every club starts at
+overall 70) with each club's best-XI average overall from the EA FC snapshot
+(`club_seed.py` → `data/laliga_squad_overalls.csv`, 31/31 clubs mapped) **measurably
+helps** — a rare non-null in this repo:
+
+| Model | RPS | Accuracy |
+|---|--:|--:|
+| Elo | 0.2005 | 50.5% |
+| **Elo + squad seed** | **0.1983** | 51.6% |
+
+The seed cuts ~0.0022 RPS (~0.0029 including season-1 cold-start) and adds ~1 pt
+accuracy — it starts newly-promoted sides near their true strength instead of average,
+and Elo refines from there. It narrows the market gap to **+0.0067 RPS**. (Caveat: the
+EA snapshot is a single season used as a static, roughly time-invariant prior — no
+outcome leak, but a promoted club's current squad can misstate its older self.)
+
+**Beat-the-close screen (`beat_close.py`).** The decisive edge test: on the 467 games
+where the seeded model and the closing line pick a **different match-winner**, bet the
+model's side at the closing price:
+
+- Model-side record: **136–331 (29% win), flat-stake ROI −5.0%.**
+
+**No edge.** Even where the model disagrees with the market, the market is right ~71% of
+the time; the −5% ROI is essentially the vig. The model's disagreements are noise
+relative to the sharp line. (For contrast, on the 3,333 *agreements* the shared favourite
+won 56% at 90 min — the market's picks are simply better.)
+
 ## What this means for betting
 
 Same lesson as the World Cup work, now on dense data: **the closing market is the
@@ -54,20 +83,22 @@ in-play — not the efficient headline 1X2 close.
 
 ## Next steps
 
-- **Phase 2:** add a club squad-rating seed (EA FC dataset via `fetch_player_stats.py`)
-  to improve cold-start / post-transfer-window accuracy, and test whether it moves
-  the gap.
-- **Beat-the-close screen:** isolate the fixtures where DC and the market disagree
-  on the favourite and grade *those* specifically (the only plausible edge pocket).
+- **Phase 2 — DONE:** squad seed helps (RPS 0.1983); beat-the-close screen shows no
+  bettable edge (−5% ROI on disagreements). Model is accurate but not sharper than close.
 - **Phase 3:** MLS — same engine, harder data sourcing (no football-data.co.uk
-  coverage; American Soccer Analysis / football-data.org APIs).
+  coverage; American Soccer Analysis / football-data.org APIs). MLS lines are softer
+  than La Liga's, so the beat-the-close screen there is the more interesting test.
+- **Optional:** seed Dixon–Coles the same way (currently only Elo is seeded); combine
+  seed + DC for the best pure-model number.
 
 ## Reproduce
 
 ```bash
 # 1. download seasons: curl football-data.co.uk/mmz4281/<SS>/SP1.csv -> data/raw/laliga/
 python ingest_league.py "data/raw/laliga/*.csv" --out data/laliga_results.csv
-python backtest_league.py --warmup 380 --k 25 --hfa 75 --dc
+python club_seed.py                                       # build squad-overall seed
+python backtest_league.py --warmup 380 --k 25 --hfa 75 --dc --seed
+python beat_close.py                                      # edge screen
 ```
 
 *Pure analytic backtest — no simulation, no API key. Re-run as new seasons are

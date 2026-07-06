@@ -6,32 +6,38 @@
 
 | Match | Date (ET) | W/D/L | xG | To advance | Verdict | Result |
 |---|---|---|---|---|---|---|
-| Canada vs Morocco *(host Canada at home)* | Sat Jul 4, 1:00 PM | 26 / 29 / 45 | 1.2–1.4 | **Morocco 59%** | Slight edge Morocco | — |
-| Paraguay vs France | Sat Jul 4, 5:00 PM | 11 / 16 / 72 | 0.7–1.9 | **France 81%** | France strong | — |
-| Brazil vs Norway | Sun Jul 5, 4:00 PM | 50 / 25 / 25 | 1.5–1.1 | **Brazil 62%** | Slight edge Brazil | — |
-| Mexico vs England *(host Mexico at home)* | Sun Jul 5, 8:00 PM | 28 / 27 / 45 | 1.0–1.6 | **England 59%** | Slight edge England | — |
+| Canada vs Morocco *(host Canada at home)* | Sat Jul 4, 1:00 PM | 26 / 28 / 46 | 1.1–1.5 | **Morocco 60%** | Slight edge Morocco | **Morocco** ✅ hit (0–3) |
+| Paraguay vs France | Sat Jul 4, 5:00 PM | 11 / 16 / 73 | 0.7–1.9 | **France 81%** | France strong | **France** ✅ hit (0–1) |
+| Brazil vs Norway | Sun Jul 5, 4:00 PM | 49 / 25 / 25 | 1.4–1.2 | **Brazil 62%** | Slight edge Brazil | **Norway** ❌ miss (1–2) |
+| Mexico vs England *(host Mexico at home)* | Sun Jul 5, 8:00 PM | 28 / 26 / 46 | 1.0–1.6 | **England 59%** | Slight edge England | **England** ✅ hit (2–3) |
 | Portugal vs Spain | Mon Jul 6, 3:00 PM | 28 / 30 / 42 | 1.2–1.4 | **Spain 57%** | Slight edge Spain | — |
 | USA vs Belgium *(host USA at home)* | Mon Jul 6, 8:00 PM | 34 / 29 / 37 | 1.2–1.4 | **Belgium 51%** | Toss-up | — |
 | Argentina vs Egypt | Tue Jul 7, 12:00 PM | 59 / 19 / 21 | 1.8–0.8 | **Argentina 69%** | Argentina favoured · *model-only* | — |
 | Switzerland vs Colombia | Tue Jul 7, 4:00 PM | 37 / 32 / 31 | 1.4–1.2 | **Switzerland 53%** | Toss-up · *model-only* | — |
 
+**Model on advancement so far: 3/4 correct (75%)** across the 4 decided tie(s) of 8. ✅ = the model's P(advance) favourite went through; ❌ = it was knocked out (a shootout loss by the favourite counts as a miss). Grade is on **advancement**, not the 90' score.
+
 ## Detail
 
 ### Canada vs Morocco — Sat Jul 4, 1:00 PM  *(host Canada at home)*
-- Model+market **26.3 / 28.6 / 45.1** (W/D/L) · xG 1.21–1.39.
-- **To advance:** Canada 41% · Morocco 59% → **Morocco**.  *(model-only had Canada 48%; market trimmed it.)*
+- Model+market **26.0 / 27.8 / 46.2** (W/D/L) · xG 1.11–1.49.
+- **To advance:** Canada 40% · Morocco 60% → **Morocco**.  *(model-only had Canada 47%; market trimmed it.)*
+- **Result:** **Morocco** advanced (0–3) — model ✅ correct.
 
 ### Paraguay vs France — Sat Jul 4, 5:00 PM
-- Model+market **11.2 / 16.3 / 72.4** (W/D/L) · xG 0.70–1.90.
+- Model+market **11.2 / 16.2 / 72.6** (W/D/L) · xG 0.67–1.93.
 - **To advance:** Paraguay 19% · France 81% → **France**.  *(model-only had Paraguay 26%; market trimmed it.)*
+- **Result:** **France** advanced (0–1) — model ✅ correct.
 
 ### Brazil vs Norway — Sun Jul 5, 4:00 PM
-- Model+market **49.8 / 24.9 / 25.2** (W/D/L) · xG 1.49–1.11.
+- Model+market **49.2 / 25.5 / 25.4** (W/D/L) · xG 1.39–1.21.
 - **To advance:** Brazil 62% · Norway 38% → **Brazil**.  *(model-only had Brazil 60%; market lifted it.)*
+- **Result:** **Norway** advanced (1–2) — model ❌ wrong (favourite eliminated).
 
 ### Mexico vs England — Sun Jul 5, 8:00 PM  *(host Mexico at home)*
-- Model+market **28.1 / 26.6 / 45.3** (W/D/L) · xG 1.04–1.56.
-- **To advance:** Mexico 41% · England 59% → **England**.  *(model-only had Mexico 38%; market lifted it.)*
+- Model+market **27.8 / 25.9 / 46.3** (W/D/L) · xG 0.99–1.61.
+- **To advance:** Mexico 41% · England 59% → **England**.  *(model-only had Mexico 36%; market lifted it.)*
+- **Result:** **England** advanced (2–3) — model ✅ correct.
 
 ### Portugal vs Spain — Mon Jul 6, 3:00 PM
 - Model+market **27.7 / 30.5 / 41.8** (W/D/L) · xG 1.24–1.36.

@@ -1,6 +1,6 @@
 # 2026 FIFA World Cup — Live Group-to-Bracket Projection
 
-*Generated 2026-07-06. Conditioned on the 87 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify). Knockout ties are seated from real R32 fixtures (played ties locked to their actual result); the official 2026 bracket then advances the favourite for unplayed games. ✓ = projected to qualify.*
+*Generated 2026-07-06. Conditioned on the 91 results played so far (`--live`). Group winner = most-likely group winner (P finish 1st); 2nd/3rd ordered by P(qualify). Knockout ties are seated from real R32 fixtures (played ties locked to their actual result); the official 2026 bracket then advances the favourite for unplayed games. ✓ = projected to qualify.*
 
 ```mermaid
 flowchart LR
@@ -112,7 +112,7 @@ flowchart LR
     direction TB
     k2_France["France"]
     k2_Morocco["Morocco"]
-    k2_Brazil["Brazil"]
+    k2_Norway["Norway"]
     k2_England["England"]
     k2_Spain["Spain"]
     k2_Belgium["Belgium"]
@@ -170,8 +170,8 @@ flowchart LR
   k1_France --> k2_France
   k1_Canada --> k2_Morocco
   k1_Morocco --> k2_Morocco
-  k1_Brazil --> k2_Brazil
-  k1_Norway --> k2_Brazil
+  k1_Brazil --> k2_Norway
+  k1_Norway --> k2_Norway
   k1_Mexico --> k2_England
   k1_England --> k2_England
   k1_Portugal --> k2_Spain
@@ -186,7 +186,7 @@ flowchart LR
   k2_Morocco --> k3_France
   k2_Spain --> k3_Spain
   k2_Belgium --> k3_Spain
-  k2_Brazil --> k3_England
+  k2_Norway --> k3_England
   k2_England --> k3_England
   k2_Argentina --> k3_Argentina
   k2_Switzerland --> k3_Argentina
@@ -201,8 +201,8 @@ flowchart LR
 
 **Projected champion: France.** Single most-likely path (favourite advances); exact probability is tiny — see the title-odds table for the real distribution.
 
-**Best-third cut (by P qualify):** in — Bosnia and Herzegovina 100%, Paraguay 100%, Ecuador 100%, Senegal 100%, Algeria 100%, DR Congo 100%, Ghana 100%, Sweden 61%.
-  Out — Iran 39%, South Korea 0%, Scotland 0%, Uruguay 0%.
+**Best-third cut (by P qualify):** in — Bosnia and Herzegovina 100%, Paraguay 100%, Ecuador 100%, Senegal 100%, Algeria 100%, DR Congo 100%, Ghana 100%, Sweden 60%.
+  Out — Iran 40%, South Korea 0%, Scotland 0%, Uruguay 0%.
 
 ## Projected finish by team (most-likely bracket)
 
@@ -213,7 +213,7 @@ flowchart LR
 | **Winner** (1) | France |
 | **Runner-Up** (1) | England |
 | **Semi-Finals** (2) | Argentina, Spain |
-| **Quarter-Finals** (4) | Belgium, Brazil, Morocco, Switzerland |
-| **Last 16** (8) | Canada, Colombia, Egypt, Mexico, Norway, Paraguay, Portugal, USA |
+| **Quarter-Finals** (4) | Belgium, Morocco, Norway, Switzerland |
+| **Last 16** (8) | Brazil, Canada, Colombia, Egypt, Mexico, Paraguay, Portugal, USA |
 | **Last 32** (16) | Algeria, Australia, Austria, Bosnia and Herzegovina, Cape Verde, Croatia, DR Congo, Ecuador, Germany, Ghana, Ivory Coast, Japan, Netherlands, Senegal, South Africa, Sweden |
 | **Group Stage** (16) | Curacao, Czechia, Haiti, Iran, Iraq, Jordan, New Zealand, Panama, Qatar, Saudi Arabia, Scotland, South Korea, Tunisia, Turkey, Uruguay, Uzbekistan |

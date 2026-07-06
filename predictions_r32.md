@@ -6,13 +6,13 @@
 
 | Match | Date (ET) | W/D/L | xG | To advance | Verdict | Result |
 |---|---|---|---|---|---|---|
-| South Africa vs Canada *(host Canada at home)* | Sat Jun 28, 3:00 PM | 22 / 25 / 53 | 1.0–1.6 | **Canada 66%** | Canada favoured | **Canada** ✅ hit (0–1) |
-| Brazil vs Japan | Mon Jun 29, 1:00 PM | 54 / 24 / 22 | 1.6–1.0 | **Brazil 66%** | Brazil favoured | **Brazil** ✅ hit (2–1) |
+| South Africa vs Canada *(host Canada at home)* | Sat Jun 28, 3:00 PM | 22 / 25 / 53 | 1.1–1.5 | **Canada 66%** | Canada favoured | **Canada** ✅ hit (0–1) |
+| Brazil vs Japan | Mon Jun 29, 1:00 PM | 53 / 24 / 23 | 1.6–1.0 | **Brazil 65%** | Brazil favoured | **Brazil** ✅ hit (2–1) |
 | Germany vs Paraguay | Mon Jun 29, 4:30 PM | 66 / 19 / 15 | 1.7–0.9 | **Germany 76%** | Germany strong | **Paraguay** ❌ miss (1–1, pens) |
-| Netherlands vs Morocco | Mon Jun 29, 9:00 PM | 46 / 28 / 26 | 1.5–1.1 | **Netherlands 60%** | Slight edge Netherlands | **Morocco** ❌ miss (1–1, pens) |
-| Ivory Coast vs Norway | Tue Jun 30, 1:00 PM | 30 / 28 / 43 | 1.2–1.4 | **Norway 56%** | Slight edge Norway | **Norway** ✅ hit (1–2) |
+| Netherlands vs Morocco | Mon Jun 29, 9:00 PM | 45 / 28 / 27 | 1.4–1.2 | **Netherlands 59%** | Slight edge Netherlands | **Morocco** ❌ miss (1–1, pens) |
+| Ivory Coast vs Norway | Tue Jun 30, 1:00 PM | 30 / 28 / 43 | 1.1–1.5 | **Norway 57%** | Slight edge Norway | **Norway** ✅ hit (1–2) |
 | France vs Sweden | Tue Jun 30, 5:00 PM | 64 / 19 / 17 | 1.8–0.8 | **France 74%** | France favoured | **France** ✅ hit (3–0) |
-| Mexico vs Ecuador *(host Mexico at home)* | Tue Jun 30, 9:00 PM | 49 / 24 / 28 | 1.6–1.0 | **Mexico 60%** | Slight edge Mexico · *model-only* | **Mexico** ✅ hit (2–0) |
+| Mexico vs Ecuador *(host Mexico at home)* | Tue Jun 30, 9:00 PM | 48 / 24 / 28 | 1.6–1.0 | **Mexico 60%** | Slight edge Mexico · *model-only* | **Mexico** ✅ hit (2–0) |
 | England vs DR Congo | Wed Jul 1, 12:00 PM | 63 / 19 / 18 | 1.8–0.8 | **England 72%** | England favoured · *model-only* | **England** ✅ hit (2–1) |
 | Belgium vs Senegal | Wed Jul 1, 4:00 PM | 50 / 24 / 26 | 1.6–1.0 | **Belgium 62%** | Slight edge Belgium · *model-only* | **Belgium** ✅ hit (3–2) |
 | USA vs Bosnia and Herzegovina *(host USA at home)* | Wed Jul 1, 8:00 PM | 60 / 21 / 18 | 1.6–1.0 | **USA 71%** | USA favoured | **USA** ✅ hit (2–0) |
@@ -28,42 +28,42 @@
 ## Detail
 
 ### South Africa vs Canada — Sat Jun 28, 3:00 PM  *(host Canada at home)*
-- Model+market **21.7 / 25.0 / 53.3** (W/D/L) · xG 1.04–1.56.
+- Model+market **21.8 / 25.3 / 52.9** (W/D/L) · xG 1.09–1.51.
 - **To advance:** South Africa 34% · Canada 66% → **Canada**.  *(model-only had South Africa 37%; market trimmed it.)*
 - **Result:** **Canada** advanced (0–1) — model ✅ correct.
 
 ### Brazil vs Japan — Mon Jun 29, 1:00 PM
-- Model+market **53.8 / 23.7 / 22.5** (W/D/L) · xG 1.60–1.00.
-- **To advance:** Brazil 66% · Japan 34% → **Brazil**.  *(model-only had Brazil 63%; market lifted it.)*
+- Model+market **52.9 / 24.3 / 22.8** (W/D/L) · xG 1.55–1.05.
+- **To advance:** Brazil 65% · Japan 35% → **Brazil**.  *(model-only had Brazil 62%; market lifted it.)*
 - **Result:** **Brazil** advanced (2–1) — model ✅ correct.
 
 ### Germany vs Paraguay — Mon Jun 29, 4:30 PM
-- Model+market **66.4 / 19.0 / 14.6** (W/D/L) · xG 1.73–0.87.
+- Model+market **66.4 / 18.9 / 14.7** (W/D/L) · xG 1.74–0.86.
 - **To advance:** Germany 76% · Paraguay 24% → **Germany**.  *(model-only had Germany 73%; market lifted it.)*
 - **Result:** **Paraguay** advanced (1–1 after penalties) — model ❌ wrong (favourite eliminated).
 
 ### Netherlands vs Morocco — Mon Jun 29, 9:00 PM
-- Model+market **46.0 / 27.5 / 26.4** (W/D/L) · xG 1.49–1.11.
-- **To advance:** Netherlands 60% · Morocco 40% → **Netherlands**.  *(model-only had Netherlands 59%; market lifted it.)*
+- Model+market **45.1 / 28.3 / 26.7** (W/D/L) · xG 1.44–1.16.
+- **To advance:** Netherlands 59% · Morocco 41% → **Netherlands**.  *(model-only had Netherlands 58%; market lifted it.)*
 - **Result:** **Morocco** advanced (1–1 after penalties) — model ❌ wrong (favourite eliminated).
 
 ### Ivory Coast vs Norway — Tue Jun 30, 1:00 PM
-- Model+market **29.6 / 27.8 / 42.6** (W/D/L) · xG 1.20–1.40.
-- **To advance:** Ivory Coast 44% · Norway 56% → **Norway**.  *(model-only had Ivory Coast 47%; market trimmed it.)*
+- Model+market **29.5 / 27.6 / 42.9** (W/D/L) · xG 1.14–1.46.
+- **To advance:** Ivory Coast 43% · Norway 57% → **Norway**.  *(model-only had Ivory Coast 47%; market trimmed it.)*
 - **Result:** **Norway** advanced (1–2) — model ✅ correct.
 
 ### France vs Sweden — Tue Jun 30, 5:00 PM
-- Model+market **64.1 / 19.3 / 16.6** (W/D/L) · xG 1.79–0.81.
+- Model+market **64.1 / 19.3 / 16.6** (W/D/L) · xG 1.80–0.80.
 - **To advance:** France 74% · Sweden 26% → **France**.  *(model-only had France 65%; market lifted it.)*
 - **Result:** **France** advanced (3–0) — model ✅ correct.
 
 ### Mexico vs Ecuador — Tue Jun 30, 9:00 PM  *(host Mexico at home)*
-- Model **48.6 / 23.7 / 27.7** (W/D/L) · xG 1.60–1.00.
+- Model **47.8 / 24.2 / 28.0** (W/D/L) · xG 1.57–1.03.
 - **To advance:** Mexico 60% · Ecuador 40% → **Mexico**.
 - **Result:** **Mexico** advanced (2–0) — model ✅ correct.
 
 ### England vs DR Congo — Wed Jul 1, 12:00 PM
-- Model **62.7 / 18.9 / 18.4** (W/D/L) · xG 1.78–0.82.
+- Model **62.8 / 18.8 / 18.3** (W/D/L) · xG 1.80–0.80.
 - **To advance:** England 72% · DR Congo 28% → **England**.
 - **Result:** **England** advanced (2–1) — model ✅ correct.
 

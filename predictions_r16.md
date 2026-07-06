@@ -12,6 +12,8 @@
 | Mexico vs England *(host Mexico at home)* | Sun Jul 5, 8:00 PM | 28 / 27 / 45 | 1.0–1.6 | **England 59%** | Slight edge England | — |
 | Portugal vs Spain | Mon Jul 6, 3:00 PM | 28 / 30 / 42 | 1.2–1.4 | **Spain 57%** | Slight edge Spain | — |
 | USA vs Belgium *(host USA at home)* | Mon Jul 6, 8:00 PM | 34 / 29 / 37 | 1.2–1.4 | **Belgium 51%** | Toss-up | — |
+| Argentina vs Egypt | Tue Jul 7, 12:00 PM | 59 / 19 / 21 | 1.8–0.8 | **Argentina 69%** | Argentina favoured · *model-only* | — |
+| Switzerland vs Colombia | Tue Jul 7, 4:00 PM | 37 / 32 / 31 | 1.4–1.2 | **Switzerland 53%** | Toss-up · *model-only* | — |
 
 ## Detail
 
@@ -38,5 +40,13 @@
 ### USA vs Belgium — Mon Jul 6, 8:00 PM  *(host USA at home)*
 - Model+market **34.1 / 28.9 / 36.9** (W/D/L) · xG 1.21–1.39.
 - **To advance:** USA 49% · Belgium 51% → **Belgium**.  *(model-only had USA 47%; market lifted it.)*
+
+### Argentina vs Egypt — Tue Jul 7, 12:00 PM
+- Model **59.2 / 19.3 / 21.4** (W/D/L) · xG 1.76–0.84.
+- **To advance:** Argentina 69% · Egypt 31% → **Argentina**.
+
+### Switzerland vs Colombia — Tue Jul 7, 4:00 PM
+- Model **37.0 / 31.9 / 31.0** (W/D/L) · xG 1.37–1.23.
+- **To advance:** Switzerland 53% · Colombia 47% → **Switzerland**.
 
 *Anchored 50/50 to DraftKings where odds exist (`apply_odds.HIST`). Regenerate: `python gen_ko_preds.py r16`. Log results to `data/results.csv` after kickoff (knockout: log the score for Elo, track the advancer separately).*

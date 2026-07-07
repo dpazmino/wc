@@ -71,38 +71,64 @@ Brier = squared error for that game (lower is better; a blind 1/3-1/3-1/3 guess 
 | Uruguay vs Spain | 28/25/47 | Spain | 0-1 (Spain) | ✅ | 0.42 |
 | Egypt vs Iran | 42/28/31 | Egypt | 1-1 (Draw) | ❌ | 0.79 |
 | New Zealand vs Belgium | 14/17/69 | Belgium | 1-5 (Belgium) | ✅ | 0.14 |
+| **June 27 — Final group matchday** | | | | | |
+| Panama vs England | 13/13/74 | England | 0-2 (England) | ✅ | 0.10 |
+| Croatia vs Ghana | 41/28/31 | Croatia | 2-1 (Croatia) | ✅ | 0.53 |
+| Colombia vs Portugal | 27/28/45 | Portugal | 0-0 (Draw) | ❌ | 0.80 |
+| DR Congo vs Uzbekistan | 44/26/30 | DR Congo | 3-1 (DR Congo) | ✅ | 0.48 |
+| Algeria vs Austria | 32/29/39 | Austria | 3-3 (Draw) | ❌ | 0.76 |
+| Jordan vs Argentina | 15/16/69 | Argentina | 1-3 (Argentina) | ✅ | 0.14 |
+| **Round of 32** | | | | | |
+| Canada vs South Africa (H) | 51/24/26 | Canada | 1-0 (Canada) | ✅ | 0.36 |
+| Brazil vs Japan | 50/24/26 | Brazil | 2-1 (Brazil) | ✅ | 0.38 |
+| Germany vs Paraguay | 63/19/18 | Germany | 1-1 (Draw) | ❌ | 1.09 |
+| Netherlands vs Morocco | 45/27/28 | Netherlands | 1-1 (Draw) | ❌ | 0.81 |
+| Ivory Coast vs Norway | 33/28/39 | Norway | 1-2 (Norway) | ✅ | 0.56 |
+| France vs Sweden | 55/22/24 | France | 3-0 (France) | ✅ | 0.31 |
+| Mexico vs Ecuador (H) | 48/24/28 | Mexico | 2-0 (Mexico) | ✅ | 0.41 |
+| England vs DR Congo | 63/19/18 | England | 2-1 (England) | ✅ | 0.21 |
+| Belgium vs Senegal | 52/22/26 | Belgium | 3-2 (Belgium) | ✅ | 0.35 |
+| USA vs Bosnia and Herzegovina (H) | 51/24/26 | USA | 2-0 (USA) | ✅ | 0.37 |
+| Spain vs Austria | 53/22/25 | Spain | 3-0 (Spain) | ✅ | 0.33 |
+| Portugal vs Croatia | 48/24/27 | Portugal | 2-1 (Portugal) | ✅ | 0.40 |
+| Switzerland vs Algeria | 46/25/29 | Switzerland | 2-0 (Switzerland) | ✅ | 0.44 |
+| Australia vs Egypt | 28/26/47 | Egypt | 1-1 (Draw) | ❌ | 0.84 |
+| Argentina vs Cape Verde | 65/18/17 | Argentina | 3-2 (Argentina) | ✅ | 0.18 |
+| Colombia vs Ghana | 43/26/31 | Colombia | 1-0 (Colombia) | ✅ | 0.50 |
+| **Round of 16** | | | | | |
+| Canada vs Morocco | 27/23/50 | Morocco | 0-3 (Morocco) | ✅ | 0.38 |
+| Paraguay vs France | 17/18/65 | France | 0-1 (France) | ✅ | 0.18 |
+| Brazil vs Norway | 47/26/28 | Brazil | 1-2 (Norway) | ❌ | 0.81 |
+| Mexico vs England (H) | 25/22/53 | England | 2-3 (England) | ✅ | 0.33 |
+| Portugal vs Spain | 31/30/39 | Spain | 0-1 (Spain) | ✅ | 0.56 |
+| USA vs Belgium (H) | 31/27/42 | Belgium | 1-4 (Belgium) | ✅ | 0.50 |
 
-## Scoreboard (65 games)
-- **Top-pick accuracy: 41 / 65 = 63%** (added France, Senegal, Spain, Belgium on the June 26 slate)
-- **Avg Brier (model): 0.539**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
-- **Draws: 18 / 65** (28%) · **Outright upsets against the model: 6 / 65** (South Korea, Australia, Paraguay, South Africa, Ecuador, Türkiye)
+## Scoreboard (93 games)
+- **Top-pick accuracy: 63 / 93 = 68%** (up from 63% at 65 games — knockout rounds boosted it)
+- **Avg Brier (model): 0.524**  vs  **naive 1/3 baseline: 0.667**  → model **ahead** of the baseline
+- **Draws: 23 / 93** (25%) · **Outright upsets against the model: 7 / 93** (South Korea, Australia, Paraguay, South Africa, Ecuador, Türkiye, Norway over Brazil R16)
 
 ## Honest read
-With nearly the whole group stage logged (65 games), the picture has stabilised: the model is a
-**strong winner-picker that bleeds on draws.**
+Through the R16 (93 games), the model has **gotten sharper as stakes rose.**
 
-- **On decisive games it's excellent.** Counting only games that had a winner, the model picked
-  the right side ~87% of the time and almost never confused a home win for an away win. The June
-  26 slate was textbook: France, Senegal, Spain and Belgium all delivered as favourites (Briers
-  0.34/0.34/0.42/0.14).
-- **Draws are the whole miss.** 18 of 65 games (28%) were draws, and the model picks a side in
-  almost all of them — so most of its 24 misses are "favourite controlled it, drew anyway." It
-  models draws at only ~22%, a calibration gap, not a ranking error.
-- **Best calls:** **Germany 7-1 Curaçao** (Brier 0.16), **New Zealand 1-5 Belgium** (0.14),
-  **France 3-0 Iraq** (0.14), and the **Ivory Coast–Ecuador** pre-tournament market beat.
-- **The 6 outright upsets** (South Korea, Australia, Paraguay, South Africa, Ecuador, Türkiye)
-  include the textbook dead-rubber miss: an already-qualified **Germany rotated and lost 2-1 to
-  Ecuador** — the model has no "nothing to play for" concept.
+- **Knockout accuracy is excellent.** The R32 went 13/16 (81%), the R16 so far is 5/6 (83%).
+  The only knockout miss is **Norway 2-1 Brazil** in the R16 — a genuine upset. Combined
+  knockout accuracy is **18/22 = 82%**, far above the 63% group-stage rate.
+- **Draws compress in the knockouts.** Only 3 draws in 22 knockout games (14%) vs 20 in 71
+  group games (28%). Since the model's weakness is draws, the knockout format plays to its
+  strength: pick the better side, and they usually win in 90'.
+- **Best calls:** **Panama 0-2 England** (Brier 0.10), **France 3-0 Iraq** (0.14),
+  **New Zealand 1-5 Belgium** (0.14), **Jordan 1-3 Argentina** (0.14).
+- **The 3 R32 draws** (Germany–Paraguay, Netherlands–Morocco, Australia–Egypt) all involved
+  the model's favourite drawing, not losing — two went to penalties with the favourite
+  eliminated (Germany, Netherlands), confirming the "draw → coin-flip" blind spot.
 
 ## Caveats
-- 65 games is now a meaningful sample, but the rigorous measure is still the 328-fixture
-  walk-forward backtest (**CV RPS 0.200 vs 0.232 baseline; optimism ~0.000** — the edge is real).
-- The draw lean (28% actual vs ~22% modelled) persists across the full group stage — worth a
-  **DRAW_BASE / draw-mass** look now that the group stage is nearly done, **not** a strength-rating
-  change. The CV is unmoved, so don't retune strength off this.
-- **Thesis watch:** the under-covered-African-side qualify bets largely landed (Ghana, Ivory
-  Coast, Algeria advancing) — see [[model-vs-draftkings-tracker]]. But the *game-level* edge
-  hasn't materialised: where the model disagreed with the sharp line, the line won (see BET_TRACKER).
+- The rigorous measure remains the walk-forward backtest (**Brier 0.524, accuracy 68%, ECE
+  0.095** — see MODEL_CALIBRATION.md). The model beats the baseline but the market still wins
+  where odds exist.
+- Norway's R16 win over Brazil is the first outright knockout upset — worth monitoring whether
+  the model's thin-data coverage of Norway (strong squad, few historical results) is a factor.
+- Two R16 games remain (Argentina vs Egypt, Switzerland vs Colombia on July 7).
 
-*Updated through the June 26 Group G/H/I final matchday (Norway–France … New Zealand–Belgium).
-The June 27 closing fixtures (Panama–England, Croatia–Ghana, Jordan–Argentina …) are not yet played.*
+*Updated through July 6 R16 (Portugal–Spain, USA–Belgium). Argentina–Egypt and Switzerland–Colombia not yet played.*

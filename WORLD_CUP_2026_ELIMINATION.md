@@ -1,30 +1,30 @@
 # 2026 FIFA World Cup — Stage-of-Elimination Distribution
 
-*Generated 2026-07-06. Live forecast (91 results locked in, 100,000 Monte-Carlo runs, seed 0). Each row is the probability a team's run **ends** at that stage (the cells sum to ~100%). `Survive grp` = reach the knockout = `100 − Group`. Sorted by expected stage reached (deepest first). Use this against bookmaker 'stage of elimination' / 'to reach round X' props: de-vig the market and compare to the cumulative implied here.*
+*Generated 2026-07-07. Live forecast (93 results locked in, 100,000 Monte-Carlo runs, seed 0). Each row is the probability a team's run **ends** at that stage (the cells sum to ~100%). `Survive grp` = reach the knockout = `100 − Group`. Sorted by expected stage reached (deepest first). Use this against bookmaker 'stage of elimination' / 'to reach round X' props: de-vig the market and compare to the cumulative implied here.*
 
 | # | Team | Grp | Group | R32 | R16 | QF | SF | Final | Champ | Modal exit | Survive grp |
 |--:|------|:--:|--:|--:|--:|--:|--:|--:|--:|:--:|--:|
-| 1 | England | L | 0% | 0% | 0% | 36% | 27% | 17% | 21% | QF | 100% |
-| 2 | Norway | I | 0% | 0% | 0% | 64% | 19% | 11% | 6% | QF | 100% |
-| 3 | Argentina | J | 0% | 0% | 28% | 28% | 20% | 11% | 12% | R16 | 100% |
-| 4 | France | I | 0% | 0% | 40% | 22% | 16% | 8% | 14% | R16 | 100% |
-| 5 | Belgium | G | 0% | 0% | 38% | 34% | 15% | 7% | 6% | R16 | 100% |
-| 6 | Spain | H | 0% | 0% | 49% | 21% | 14% | 8% | 9% | R16 | 100% |
-| 7 | Portugal | K | 0% | 0% | 51% | 20% | 14% | 7% | 8% | R16 | 100% |
-| 8 | Colombia | K | 0% | 0% | 51% | 27% | 13% | 5% | 4% | R16 | 100% |
-| 9 | Germany | E | 0% | 28% | 40% | 13% | 9% | 5% | 5% | R16 | 100% |
-| 10 | Netherlands | F | 0% | 42% | 18% | 22% | 9% | 5% | 5% | R32 | 100% |
-| 11 | Canada | B | 0% | 0% | 82% | 13% | 3% | 1% | 0% | R16 | 100% |
-| 12 | Switzerland | B | 0% | 43% | 27% | 15% | 8% | 3% | 3% | R32 | 100% |
-| 13 | Morocco | C | 0% | 58% | 0% | 26% | 9% | 4% | 3% | R32 | 100% |
-| 14 | Brazil | C | 0% | 0% | 100% | 0% | 0% | 0% | 0% | R16 | 100% |
-| 15 | Mexico | A | 0% | 0% | 100% | 0% | 0% | 0% | 0% | R16 | 100% |
+| 1 | England | L | 0% | 0% | 0% | 36% | 27% | 17% | 20% | QF | 100% |
+| 2 | Spain | H | 0% | 0% | 0% | 43% | 26% | 14% | 17% | QF | 100% |
+| 3 | Norway | I | 0% | 0% | 0% | 64% | 19% | 11% | 6% | QF | 100% |
+| 4 | Argentina | J | 0% | 0% | 29% | 28% | 20% | 11% | 12% | R16 | 100% |
+| 5 | Belgium | G | 0% | 0% | 19% | 45% | 19% | 9% | 9% | QF | 100% |
+| 6 | France | I | 0% | 0% | 40% | 22% | 17% | 7% | 14% | R16 | 100% |
+| 7 | Colombia | K | 0% | 0% | 51% | 27% | 13% | 5% | 4% | R16 | 100% |
+| 8 | Germany | E | 0% | 28% | 40% | 13% | 9% | 5% | 5% | R16 | 100% |
+| 9 | Netherlands | F | 0% | 42% | 17% | 22% | 10% | 4% | 5% | R32 | 100% |
+| 10 | Canada | B | 0% | 0% | 83% | 12% | 3% | 1% | 0% | R16 | 100% |
+| 11 | Switzerland | B | 0% | 43% | 27% | 16% | 8% | 4% | 3% | R32 | 100% |
+| 12 | Morocco | C | 0% | 58% | 0% | 26% | 10% | 4% | 3% | R32 | 100% |
+| 13 | Brazil | C | 0% | 0% | 100% | 0% | 0% | 0% | 0% | R16 | 100% |
+| 14 | Mexico | A | 0% | 0% | 100% | 0% | 0% | 0% | 0% | R16 | 100% |
+| 15 | Portugal | K | 0% | 0% | 100% | 0% | 0% | 0% | 0% | R16 | 100% |
 | 16 | Egypt | G | 0% | 40% | 41% | 11% | 5% | 2% | 1% | R16 | 100% |
-| 17 | USA | D | 0% | 50% | 31% | 13% | 4% | 2% | 1% | R32 | 100% |
-| 18 | Algeria | J | 0% | 50% | 31% | 12% | 4% | 2% | 1% | R32 | 100% |
-| 19 | Australia | D | 0% | 60% | 30% | 7% | 2% | 1% | 0% | R32 | 100% |
+| 17 | Algeria | J | 0% | 50% | 32% | 13% | 4% | 2% | 1% | R32 | 100% |
+| 18 | Australia | D | 0% | 60% | 30% | 7% | 2% | 1% | 0% | R32 | 100% |
+| 19 | USA | D | 0% | 50% | 50% | 0% | 0% | 0% | 0% | R32 | 100% |
 | 20 | Bosnia and Herzegovina | B | 0% | 72% | 21% | 5% | 2% | 1% | 0% | R32 | 100% |
-| 21 | Sweden | F | 39% | 31% | 14% | 8% | 4% | 2% | 1% | Group | 61% |
+| 21 | Sweden | F | 39% | 32% | 14% | 8% | 4% | 2% | 1% | Group | 61% |
 | 22 | Austria | J | 0% | 100% | 0% | 0% | 0% | 0% | 0% | R32 | 100% |
 | 23 | Cape Verde | H | 0% | 100% | 0% | 0% | 0% | 0% | 0% | R32 | 100% |
 | 24 | Croatia | L | 0% | 100% | 0% | 0% | 0% | 0% | 0% | R32 | 100% |
@@ -36,7 +36,7 @@
 | 30 | Paraguay | D | 0% | 100% | 0% | 0% | 0% | 0% | 0% | R32 | 100% |
 | 31 | Senegal | I | 0% | 100% | 0% | 0% | 0% | 0% | 0% | R32 | 100% |
 | 32 | South Africa | A | 0% | 100% | 0% | 0% | 0% | 0% | 0% | R32 | 100% |
-| 33 | Iran | G | 61% | 26% | 9% | 3% | 1% | 0% | 0% | Group | 39% |
+| 33 | Iran | G | 61% | 26% | 8% | 3% | 1% | 0% | 0% | Group | 39% |
 | 34 | Tunisia | F | 100% | 0% | 0% | 0% | 0% | 0% | 0% | Group | 0% |
 | 35 | Curacao | E | 100% | 0% | 0% | 0% | 0% | 0% | 0% | Group | 0% |
 | 36 | Czechia | A | 100% | 0% | 0% | 0% | 0% | 0% | 0% | Group | 0% |
@@ -58,25 +58,25 @@
 
 | # | Team | Grp | Exp. index | Expected to be eliminated around |
 |--:|------|:--:|--:|---|
-| 1 | England | L | 4.22 | semi-finals–final |
-| 2 | Norway | I | 3.59 | quarter-finals–semi-finals |
-| 3 | Argentina | J | 3.51 | quarter-finals–semi-finals |
-| 4 | France | I | 3.36 | quarter-finals–semi-finals |
-| 5 | Belgium | G | 3.09 | quarter-finals–semi-finals |
-| 6 | Spain | H | 3.07 | quarter-finals–semi-finals |
-| 7 | Portugal | K | 3.00 | Last 16–quarter-finals |
-| 8 | Colombia | K | 2.84 | Last 16–quarter-finals |
-| 9 | Germany | E | 2.37 | Last 16–quarter-finals |
-| 10 | Netherlands | F | 2.33 | Last 16–quarter-finals |
-| 11 | Canada | B | 2.24 | Last 16–quarter-finals |
-| 12 | Switzerland | B | 2.12 | Last 16–quarter-finals |
-| 13 | Morocco | C | 2.09 | Last 16–quarter-finals |
-| 14 | Brazil | C | 2.00 | Last 16–quarter-finals |
-| 15 | Mexico | A | 2.00 | Last 16–quarter-finals |
+| 1 | England | L | 4.21 | semi-finals–final |
+| 2 | Spain | H | 4.05 | semi-finals–final |
+| 3 | Norway | I | 3.60 | quarter-finals–semi-finals |
+| 4 | Argentina | J | 3.50 | quarter-finals–semi-finals |
+| 5 | Belgium | G | 3.44 | quarter-finals–semi-finals |
+| 6 | France | I | 3.33 | quarter-finals–semi-finals |
+| 7 | Colombia | K | 2.84 | Last 16–quarter-finals |
+| 8 | Germany | E | 2.37 | Last 16–quarter-finals |
+| 9 | Netherlands | F | 2.33 | Last 16–quarter-finals |
+| 10 | Canada | B | 2.24 | Last 16–quarter-finals |
+| 11 | Switzerland | B | 2.13 | Last 16–quarter-finals |
+| 12 | Morocco | C | 2.09 | Last 16–quarter-finals |
+| 13 | Brazil | C | 2.00 | Last 16–quarter-finals |
+| 14 | Mexico | A | 2.00 | Last 16–quarter-finals |
+| 15 | Portugal | K | 2.00 | Last 16–quarter-finals |
 | 16 | Egypt | G | 1.90 | Last 32–Last 16 |
-| 17 | USA | D | 1.79 | Last 32–Last 16 |
-| 18 | Algeria | J | 1.78 | Last 32–Last 16 |
-| 19 | Australia | D | 1.55 | Last 32–Last 16 |
+| 17 | Algeria | J | 1.78 | Last 32–Last 16 |
+| 18 | Australia | D | 1.55 | Last 32–Last 16 |
+| 19 | USA | D | 1.50 | Last 32–Last 16 |
 | 20 | Bosnia and Herzegovina | B | 1.40 | Last 32–Last 16 |
 | 21 | Sweden | F | 1.15 | Last 32–Last 16 |
 | 22 | Austria | J | 1.00 | Last 32–Last 16 |
@@ -90,7 +90,7 @@
 | 30 | Paraguay | D | 1.00 | Last 32–Last 16 |
 | 31 | Senegal | I | 1.00 | Last 32–Last 16 |
 | 32 | South Africa | A | 1.00 | Last 32–Last 16 |
-| 33 | Iran | G | 0.61 | group stage–Last 32 |
+| 33 | Iran | G | 0.60 | group stage–Last 32 |
 | 34 | Tunisia | F | 0.00 | group stage–Last 32 |
 | 35 | Curacao | E | 0.00 | group stage–Last 32 |
 | 36 | Czechia | A | 0.00 | group stage–Last 32 |

@@ -1,13 +1,13 @@
 # Model Calibration — 2026 World Cup (walk-forward)
 
-*Generated 2026-07-06. 91 tournament games, each predicted with ratings as of its own date (no leakage). Calibration asks: when the model said X%, did it happen X%? Brier/log-loss are 3-way (lower better); ECE = expected calibration error (0 = perfect).*
+*Generated 2026-07-07. 93 tournament games, each predicted with ratings as of its own date (no leakage). Calibration asks: when the model said X%, did it happen X%? Brier/log-loss are 3-way (lower better); ECE = expected calibration error (0 = perfect).*
 
 ## Headline
 
-- **Top-pick accuracy:** 61/91 = **67%**
-- **Brier (3-way):** 0.522  (naive 1/3 baseline = 0.667)
-- **Log-loss:** 0.899
-- **ECE:** 0.097  (some miscalibration)
+- **Top-pick accuracy:** 63/93 = **68%**
+- **Brier (3-way):** 0.524  (naive 1/3 baseline = 0.667)
+- **Log-loss:** 0.901
+- **ECE:** 0.095  (some miscalibration)
 
 ## Reliability curve (all outcomes)
 
@@ -16,8 +16,8 @@
 | Prob band | n | Mean pred | Actual | Bar (pred=│ actual=█) |
 |---|--:|--:|--:|---|
 | 10–20% | 36 | 17% | 14% | `███│················` |
-| 20–30% | 127 | 25% | 18% | `████·│··············` |
-| 30–40% | 26 | 34% | 19% | `████···│············` |
+| 20–30% | 128 | 25% | 18% | `████·│··············` |
+| 30–40% | 31 | 34% | 23% | `█████··│············` |
 | 40–50% | 34 | 46% | 62% | `█████████│██········` |
 | 50–60% | 32 | 54% | 75% | `███████████│███·····` |
 | 60–70% | 17 | 65% | 71% | `█████████████│······` |
@@ -37,7 +37,7 @@
 | 70–101% | 1 | 100% | +26 pts |
 
 ## Read
-- The model's picks won **67%** overall while claiming **52%** on average — a **+15 pt** gap, i.e. the model is **under-confident** in its favourites.
+- The model's picks won **68%** overall while claiming **52%** on average — a **+16 pt** gap, i.e. the model is **under-confident** in its favourites.
 - Under-confidence is the *good* direction for betting: the model's favourites win more than its numbers say, so a fair-priced bet on them carries value.
 - Caveat: 55 games is a small sample and these are all **group-stage** games, where the draw blind spot inflates Brier; knockout (binary advance) calibration will be measured separately.
 
